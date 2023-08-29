@@ -52,12 +52,12 @@
             <div class="header_mobile">
                 <div class="menu_set">
                     <div class="container">
-                        <div class="logo col-5">
+                        <div class="logo col-7">
                             <h3>B</h3>
                             <h4>Bcoo Hub</h4>
                         </div>
 
-                        <div class="user-name col-7">
+                        <div class="user-name col-5">
                             <h6 class="">Thuc Phuong</h6>
                             <a class="login active" href="#">Đăng nhập</a>
                             <div class="btn_menu_mobile">
@@ -119,12 +119,100 @@
         </header>
         <!-- HEADER END -->
 
+        <!-- MAIN HOME START -->
 
-        <!-- MAIN START -->
         <div class="main">
 
+            <div class="tab tab1 col-md-10 col-12" id="session1">
+
+                <div class="content-left col-md-6 col-12" data-aos="fade-right">
+                    <div class="form-start">
+                        <form action="">
+                            <div class="item-form">
+                                <input type="text" placeholder="Nhập Email của bạn">
+                                <button>Tiếp</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="content-bottom">
+                        <div class="news">
+                            <div class="content-news">
+                                <div class="title-news">
+                                    <h4>Một trong những cập nhật </h4>
+                                    <h4 class="news-color">mới</h4>
+                                    <h4>gần đây</h4>
+                                </div>
+        
+                                <div class="list-news">
+                                    <div class="item-news" data-aos="fade-left">
+                                        <a href="#">Dùng vốn 10 triệu, tạo kế hoạch khởi nghiệp kiếm 200 triệu/tháng</a>
+                                        <p class="date">26/08/2023</p>
+                                    </div>
+
+                                    <div class="item-news" data-aos="fade-left">
+                                        <a href="#">Mô hình thu 60 triệu/tháng được cập nhật</a>
+                                        <p class="date">26/08/2023</p>
+                                    </div>
+                                    <button onclick="openForm('#E4C911')">Truy Cập</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+    
+                <div class="content-right col-md-6 col-12" data-aos="fade-left">
+                    <div class="slogand">
+                        <b>Thực tế - Nghiêm túc - Bền vững</b>
+                    </div>
+                    <div class="title-content">
+                        <h3>Mở khóa các cách kiếm tiền, mô hình khởi nghiệp kinh doanh</h3>
+                        <h3> thực tế,</h3>
+                        <h3> và đã thành công thu từ 30 triệu/tháng đến X... tỉ</h3>
+    
+                        <h5>Truy cập vào Kho dữ liệu <b>đa dạng cách kiếm tiền, khởi nghiệp kinh doanh, làm giàu thực tế</b> và liên tục mở rộng</h5>
+    
+                        <button onclick="openForm('#334DFF')">Bắt đầu</button>
+    
+                        <div class="form-start">
+                            <form action="">
+                                <div class="item-form">
+                                    <input type="text" placeholder="Nhập Email của bạn">
+                                    <button>Tiếp</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="tab tab2" id="session2">
+
+                <div class="content-tab">
+                    <div class="form-start">
+                        <form action="">
+                            <div class="item-form">
+                                <input type="text" placeholder="Nhập Email của bạn">
+                                <button>Tiếp</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="title-tab2">
+                        <h5>Truy cập sâu vào đầy đủ toàn bộ các mô hình thực tế</h5>
+                        <button onclick="openForm('#334DFF')">Truy Cập</button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <!-- MAIN END -->
+
+        <!-- MAIN HOME END -->
 
     </div>
 
@@ -136,12 +224,29 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/c29ec90d7d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 
 
     <!-- SCRIPT SWIPPER -->
     <script>
 
         AOS.init();
+
+        $(document).ready(function() {
+            $.scrollify({
+                section: ".tab",
+                scrollSpeed: 1000,
+                easing: "easeOutExpo",
+                setHeights: true,
+                before: function(index) {
+                // Đoạn mã chạy trước khi trang chuyển đổi
+                },
+                after: function(index) {
+                // Đoạn mã chạy sau khi trang chuyển đổi
+                }
+            });
+        });
+
 
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -192,6 +297,20 @@
             $('.popup').removeClass("active");
             $('body').css('overflow', 'auto');
         }
+
+
+        // OPEND FORM
+        const openForm = (color) => {
+            $('.content-right .form-start').addClass("active");
+            $('.main .content-right .form-start .item-form').css({
+                borderColor: color
+            });
+            $('.main .content-right .form-start .item-form button').css({
+                backgroundColor: color
+            });
+        }
+
+        
 
     </Script>
 </body>
