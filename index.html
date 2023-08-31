@@ -232,13 +232,13 @@
                             </div>
                             <!-- | -->
                             <div class="content col-lg-4 col-md-5 col-12">
-                                <div class="title-news col-md-9 col-12">
+                                <div class="title-news col-lg-10 col-md-9 col-12">
                                     <h2>Một trong những cập nhật </h2>
                                     <h2 class="news-color">mới</h2>
                                     <h2>gần đây</h2>
                                 </div>
 
-                                <div class="list-news col-md-11 col-12">
+                                <div class="list-news col-12">
                                     <div class="item-news" >
                                         <a href="#">Dùng vốn 10 triệu, tạo kế hoạch khởi nghiệp kiếm 200 triệu/tháng</a>
                                         <p class="date">26/08/2023</p>
@@ -248,7 +248,7 @@
                                         <a href="#">Mô hình thu 60 triệu/tháng được cập nhật</a>
                                         <p class="date">26/08/2023</p>
                                     </div>
-                                    <button class="btn-active-form" onclick="openForm('#E4C911')">Truy Cập</button>
+                                    <button class="btn-active-form" onclick="openFormColor('#E4C911')">Truy Cập</button>
                                 </div>
 
                             </div>
@@ -279,7 +279,7 @@
                             </div>
                         </div>
                         <!-- | -->
-                        <div class="draw col-xl-7 col-lg-8 col-md-8 col-12"> </div>
+                        <div class="draw col-xl-10 col-lg-10 col-md-12 col-12"> </div>
                     </div>
                     <!-- CONTENT TAB-1 END -->
                 </div>
@@ -356,7 +356,12 @@
                 
             // OPEND FORM
             const openForm = (color) => {
-                $('.content-right .form-start').addClass("active");
+                $('.content-right .form-start').toggleClass("active");
+            }
+
+            // OPEND FORM Color
+            const openFormColor = (color) => {
+                $('.content-right .form-start').toggleClass("active");
                 $('.main .content-right .form-start .item-form').css({
                     borderColor: color
                 });

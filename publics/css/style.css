@@ -105,7 +105,7 @@ body::-webkit-scrollbar {
     top: 0;
     position: relative;
     left: 0;
-    max-width: 1440px;
+    max-width: 1920px;
     right: 0;
     bottom: 0;
     max-height: 100vh;
@@ -574,7 +574,7 @@ body.active {
     border-radius: 8px;
 }
 
-.form-start .item-form button {
+.form-start .content-left button {
     background-color: #00BF63;
 }
 
@@ -710,9 +710,12 @@ body.active {
     z-index: 1;
     height: 100%;
     background-color: #0008C8;
-    transform: rotate(20deg) translateX(-17.5%) translateY(64%);
+    transform: rotate(20deg) translateX(-39.5%) translateY(65%);
 }
 
+.content-tab1 .content-right{
+    z-index: 2;
+}
 @media (max-width: 767px) {
     
     .content-tab1 .content-right{
