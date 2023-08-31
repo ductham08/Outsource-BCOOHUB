@@ -143,6 +143,9 @@
 
 /* Restart end */
 
+body.active {
+    overflow: hidden !important;
+}
 
 /* HEADER START */
 
@@ -311,7 +314,6 @@
 
     .header .header_mobile .menu_move {
         background-color: white;
-        padding: 10px;
         width: 100%;
         position: fixed;
         right: 0;
@@ -320,10 +322,6 @@
         transform: translateX(100%);
         min-height: 100vh;
         transition: 0.8s ease-in-out;
-    }
-
-    body.active {
-        overflow: hidden;
     }
 
     .header .header_mobile .menu_move b {
@@ -337,7 +335,7 @@
     }
 
     .header .header_mobile .menu_move ul {
-        padding: 0;
+        padding: 10px;
         margin: 0;
     }
 
@@ -373,6 +371,42 @@
 
     .header .header_mobile .menu_move .top-news li {
         margin-bottom: 7px;
+    }
+
+
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+
+    /* LOGIN DISABLE */
+
+    .login-disable h4 {
+        color: white;
+        margin: 2vw 0;
+        font-family: 'Open-san-bold';
+    }
+
+    .login-disable .top {
+        background-color: #146AFF;
+        padding: 10px;
+    }
+    
+    .login-disable button {
+        font-family: 'Open-san-bold';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5A623;
+        color: black;
+        outline: none !important;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 7px;
+    }
+    
+    .login-disable button i{
+        margin: 2px 5px 0 5px;
     }
 }
 
@@ -472,18 +506,20 @@
     box-shadow: 2px 2px 5px 1px #898989;
 }
 
-.main .content-right .form-start {
+.main .form-start {
     position: relative;
     opacity: 0;
     z-index: -1;
+    height: 0;
     transition: 0.5s ease-in-out;
 }
 
-.main .content-right .form-start.active {
+.main .form-start.active {
     position: relative;
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
     transition: 0.5s ease-in-out;
+    height: inherit;
 }
 
 .main .form-start .item-form input {

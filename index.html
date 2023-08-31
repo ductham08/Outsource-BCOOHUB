@@ -61,7 +61,7 @@
                                         <h6 class>Thuc Phuong</h6>
                                         <a class="login active" href="#">Đăng
                                             nhập</a>
-                                        <div class="btn_menu_mobile">
+                                        <div class="btn_menu_mobile" onclick="handleLogin()">
                                             <div class="item_menu top"></div>
                                             <div class="item_menu center"></div>
                                             <div class="item_menu bottom"></div>
@@ -69,7 +69,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu_move">
+
+                            <div class="menu_move login-active">
                                 <p>Mục tiêu của <b>Bcoohub</b> là những nhà khởi
                                     nghiệp phát triển <b>nền Kinh tế Việt Nam</b>
                                 </p>
@@ -121,13 +122,83 @@
                                             lúc 36 tuổi</a></li>
                                 </ul>
                             </div>
+                            
+
+                            <div class="menu_move login-disable ">
+                                <div class="top">
+                                    <h4>
+                                        Unlock the full power of the Crunchbase Platform with Crunchbase Pro!
+                                    </h4>
+
+                                    <button onclick="openFormHeader('#334DFF')">
+                                        Mở khóa truy cập
+                                        <i class="fa-solid fa-plus" style="color: #000000;"></i>
+                                    </button>
+
+                                </div>
+
+                                <div class="form-start">
+                                    <form action>
+                                        <div class="item-form">
+                                            <input type="text"
+                                                placeholder="Nhập Email của bạn">
+                                            <button>Tiếp</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Advance</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Solutions</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Products</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Resources</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Pricing</a></b>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <b><a href="#">Log In</a></b>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </header>
                     <!-- HEADER END -->
 
                     <!-- MAIN HOME START -->
 
-                    <div class="tab1 col-md-10 col-12" id="session1">
+                    <div class="tab1 col-md-10 col-12">
 
                         <div class="content-left col-md-6 col-12"
                             data-aos="fade-right">
@@ -210,7 +281,7 @@
 
                 <!-- TAB 01 + HEADER END -->
 
-                <div class="tab tab2" id="session2">
+                <div class="tab tab2">
 
                     <div class="content-tab col-md-10 col-12">
                         <div class="form-start">
@@ -248,7 +319,7 @@
 
                 <!-- TAB 02 END -->
 
-                <div class="tab tab3" id="session3">
+                <div class="tab tab3">
 
                     <div class="content-tab col-md-10 col-12">
                        
@@ -287,103 +358,112 @@
         <!-- SCRIPT SWIPPER -->
         <script>
 
-        AOS.init();
+            AOS.init();
 
-        $(document).ready(function() {
-            $.scrollify({
-                section: ".tab",
-                scrollSpeed: 1000,
-                easing: "easeOutExpo",
-                setHeights: true,
-                before: function(index) { },
-                after: function(index) { }
+            $(document).ready(function() {
+                $.scrollify({
+                    section: ".tab",
+                    scrollSpeed: 1000,
+                    easing: "easeOutExpo",
+                    setHeights: true,
+                    before: function(index) { },
+                    after: function(index) { }
+                });
             });
-        });
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 1500,
+                },
+            });
 
 
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 1500,
-            },
-        });
 
-        // HEADER START
-        $(document).ready(function () {
-            $(".btn_menu_mobile").click(function () {
+            /****/
+            /****/
+            /****/
+            /****/
+            /****/
+
+            // CHECK LOGIN
+
+            if (localStorage.getItem("savedData")) {
+                // Lấy dữ liệu từ Local Storage và hiển thị nó trong phần tử
+                var savedData = localStorage.getItem("savedData");
+                $("#hidden-div").html(savedData);
+            }
+
+            const activeLogin = localStorage.getItem("login") ? true : false;
+
+            const handleLogin = () => {
+
+                !activeLogin ? activeMenu('.login-disable') : activeMenu('.login-active')
+
+            }
+
+
+            // HEADER START
+            const activeMenu = (element) => {
                 $(".btn_menu_mobile").toggleClass("active");
-                $(".menu_move").toggleClass("active");
-                $('body').toggleClass('active');
-                $('html').toggleClass('active');
-            });
+                $(element).toggleClass("active");
+            }
+                
+            // CLOSE BOX
+            function close_box() {
+                $('.popup-gift').removeClass("active");
+                $('.popup').removeClass("active");
+                $('body').css('overflow', 'auto');
+            }
+            
+            
+            // OPEND FORM
+            const openForm = (color) => {
+                $('body').css('overflow', 'hidden');
+                $('.content-right .form-start').addClass("active");
+                $('.main .content-right .form-start .item-form').css({
+                    borderColor: color
+                });
+                $('.main .content-right .form-start .item-form button').css({
+                    backgroundColor: color
+                });
+            }
+            
+            // OPEND FORM
+            const openFormTab2 = (color) => {
+                $('body').css('overflow', 'hidden');
+                $('.tab2 .form-start').addClass("active");
+                $('.main .tab2 .form-start .item-form').css({
+                    borderColor: color
+                });
+                $('.main .tab2 .form-start .item-form button').css({
+                    backgroundColor: color
+                });
+            }
 
-            $(".btn-move").click(function () {
-                $(".navRight").toggleClass("active");
-            });
-        });
+            // OPEND FORM
+            const openFormHeader = (color) => {
+                $('body').css('overflow', 'hidden');
+                $('.login-disable .form-start').addClass("active");
+                $('.login-disable .form-start .item-form').css({
+                    borderColor: color
+                });
+                $('.login-disable .form-start .item-form button').css({
+                    backgroundColor: color
+                });
+            }
+            
 
-        $(document).ready(function () {
-            $('.fancybox').fancybox();
-        });
-
-        // OPEND BOX
-        function opend_box(element) {
-
-            $('.popup-gift').addClass("active");
-            $(element).addClass("active");
-            $('body').css('overflow', 'hidden');
-            $('.popup').not(element).removeClass("active");
-        }
-
-        // CLOSE BOX
-        function close_box() {
-            $('.popup-gift').removeClass("active");
-            $('.popup').removeClass("active");
-            $('body').css('overflow', 'auto');
-        }
-
-
-        // OPEND FORM
-        const openForm = (color) => {
-            $('.content-right .form-start').addClass("active");
-            $('.main .content-right .form-start .item-form').css({
-                borderColor: color
-            });
-            $('.main .content-right .form-start .item-form button').css({
-                backgroundColor: color
-            });
-        }
-
-        // OPEND FORM
-        const openFormTab2 = (color) => {
-            $('.tab2 .form-start').addClass("active");
-            $('.main .tab2 .form-start .item-form').css({
-                borderColor: color
-            });
-            $('.main .tab2 .form-start .item-form button').css({
-                backgroundColor: color
-            });
-        }
-
-
-        // SLIDER STAB 3 START
-
-        
-
-        // SLIDER STAB 3 END
-
-        
-
-    </script>
+        </script>
     </body>
 
 </html>
