@@ -20,12 +20,11 @@
     </head>
 
     <body>
+        <div class="main-source">
 
-        <div class="main">
+            <div class="main" id="main">
 
-            <div class="container">
-                <div class="tab tab-1">
-
+                <div class="tab tab-firt">
                     <!-- HEADER START -->
                     <header class="header">
                         <div class="header_desk">
@@ -47,7 +46,7 @@
                                 </ul>
                             </div>
                         </div>
-    
+
                         <div class="header_mobile">
                             <div class="menu_set">
                                 <div class="container">
@@ -55,7 +54,7 @@
                                         <h3>B</h3>
                                         <h4>Bcoo Hub</h4>
                                     </div>
-    
+
                                     <div class="user-name col-md-5 col-6">
                                         <h6 class="user-name user-active">ThucPhuong</h6>
                                         <a onclick="openLogin()" class="login active" href="javascript:void(0)">Đăng nhập</a>
@@ -67,12 +66,12 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="menu_move login-active">
                                 <p>Mục tiêu của <b>Bcoohub</b> là những nhà khởi
                                     nghiệp phát triển <b>nền Kinh tế Việt Nam</b>
                                 </p>
-    
+
                                 <ul>
                                     <li>
                                         <div class="left">
@@ -107,7 +106,7 @@
                                             <b><a href="#">Những con số từ các
                                                     dự án</a></b>
                                         </div>
-    
+
                                     </li>
                                 </ul>
                                 <ul class="top-news">
@@ -121,20 +120,20 @@
                                 </ul>
                             </div>
                             
-    
+
                             <div class="menu_move login-disable ">
                                 <div class="top">
                                     <h4>
                                         Unlock the full power of the Crunchbase Platform with Crunchbase Pro!
                                     </h4>
-    
+
                                     <button onclick="openFormHeader('#334DFF')">
                                         Mở khóa truy cập
                                         <i class="fa-solid fa-plus" style="color: #000000;"></i>
                                     </button>
-    
+
                                 </div>
-    
+
                                 <div class="form-start">
                                     <form action>
                                         <div class="item-form">
@@ -144,7 +143,7 @@
                                         </div>
                                     </form>
                                 </div>
-    
+
                                 <ul>
                                     <li>
                                         <div class="left">
@@ -193,8 +192,9 @@
                         </div>
                     </header>
                     <!-- HEADER END -->
-    
-                    <!-- FORM LOGIN START -->
+
+                    <!-- MAIN HOME START -->
+
                     <div class="login-form">
                         <form action=""  class="col-md-3 col-12">
                             <div class="item-form">
@@ -213,15 +213,15 @@
                                 <a href="#">Quên Mật Khẩu</a>
                             </div>
                         </form>    
-    
+
                         <p>Chưa có tài khoản? <b><a href="#">Đăng ký tạo mới</a></b></p>
                     </div>
-                    <!-- FORM LOGIN END -->
-    
-                    <!-- CONTENT TAB-1 START -->
-                    <div class="content-tab1 content-tab-container">
-                        <div class="content-left col-md-6 col-12">
-                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+
+                    <div class="tab1 container">
+
+                        <div class="content-left col-md-6 col-12"
+                            data-aos="fade-right">
+                            <div class="form-start">
                                 <form action>
                                     <div class="item-form">
                                         <input type="text"
@@ -230,60 +230,151 @@
                                     </div>
                                 </form>
                             </div>
-                            <!-- | -->
-                            <div class="content col-lg-4 col-md-5 col-12">
-                                <div class="title-news col-md-9 col-12">
-                                    <h2>Một trong những cập nhật </h2>
-                                    <h2 class="news-color">mới</h2>
-                                    <h2>gần đây</h2>
-                                </div>
 
-                                <div class="list-news col-md-11 col-12">
-                                    <div class="item-news" >
-                                        <a href="#">Dùng vốn 10 triệu, tạo kế hoạch khởi nghiệp kiếm 200 triệu/tháng</a>
-                                        <p class="date">26/08/2023</p>
+                            <div class="content-bottom">
+                                <div class="news">
+                                    <div class="content-news">
+                                        <div class="title-news">
+                                            <h2>Một trong những cập <br> nhật </h2>
+                                            <h2 class="news-color">mới</h2>
+                                            <h2>gần đây</h2>
+                                        </div>
+
+                                        <div class="list-news">
+                                            <div class="item-news"
+                                                data-aos="fade-left">
+                                                <a href="#">Dùng vốn 10 triệu,
+                                                    tạo kế hoạch khởi nghiệp
+                                                    kiếm 200 triệu/tháng</a>
+                                                <p class="date">26/08/2023</p>
+                                            </div>
+
+                                            <div class="item-news"
+                                                data-aos="fade-left">
+                                                <a href="#">Mô hình thu 60
+                                                    triệu/tháng được cập nhật</a>
+                                                <p class="date">26/08/2023</p>
+                                            </div>
+                                            <button
+                                                onclick="openForm('#E4C911')">Truy
+                                                Cập</button>
+                                        </div>
+
                                     </div>
-
-                                    <div class="item-news" >
-                                        <a href="#">Mô hình thu 60 triệu/tháng được cập nhật</a>
-                                        <p class="date">26/08/2023</p>
-                                    </div>
-                                    <button class="btn-active-form" onclick="openForm('#E4C911')">Truy Cập</button>
                                 </div>
-
                             </div>
                         </div>
-                        <!-- | -->
-                        <div class="content-right col-md-6 col-12">
-    
-                            <b class="slogand"> Thực tế - Nghiêm túc - Bền vững </b>
-                            
-                            <div class="title">
-                                <h1> Mở khóa các cách kiếm tiền, mô hình khởi nghiệp kinh doanh </h1>
+
+                        <div class="content-right col-md-6 col-12"
+                            data-aos="fade-left">
+                            <div class="slogand">
+                                <b>Thực tế - Nghiêm túc - Bền vững</b>
+                            </div>
+                            <div class="title-content">
+                                <h1>Mở khóa các cách kiếm tiền, mô hình khởi
+                                    nghiệp kinh doanh</h1>
                                 <h1> thực tế,</h1>
-                                <h1> và đã thành công thu từ 30 triệu/tháng đến X... tỉ</h1>
-                            </div>
-    
-                            <h5 class="description">Truy cập vào Kho dữ liệu <b>đa dạng cách kiếm tiền, khởi nghiệp kinh doanh, làm giàu thực tế</b> và liên tục mở rộng</h5>
-    
-                            <button class="btn-active-form" onclick="openForm('#334DFF')">Bắt đầu</button>
-    
-                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
-                                <form action>
-                                    <div class="item-form">
-                                        <input type="text"
-                                            placeholder="Nhập Email của bạn">
-                                        <button>Tiếp</button>
-                                    </div>
-                                </form>
+                                <h1> và đã thành công thu từ 30 triệu/tháng đến
+                                    X... tỉ</h1>
+
+                                <h5>Truy cập vào Kho dữ liệu <b>đa dạng cách
+                                        kiếm tiền, khởi nghiệp kinh doanh, làm
+                                        giàu thực tế</b> và liên tục mở rộng</h5>
+
+                                <button onclick="openForm('#334DFF')">Bắt đầu</button>
+
+                                <div class="form-start">
+                                    <form action>
+                                        <div class="item-form">
+                                            <input type="text"
+                                                placeholder="Nhập Email của bạn">
+                                            <button>Tiếp</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        <!-- | -->
-                        <div class="draw col-xl-7 col-lg-8 col-md-8 col-12"> </div>
+
                     </div>
-                    <!-- CONTENT TAB-1 END -->
+
+                    <div class="draw-tab1">
+                        <!-- <img src="./publics/images/draw-tab1.png" width="100%" alt=""> -->
+                    </div>
                 </div>
+
+                <!-- TAB 01 + HEADER END -->
+
+                <div class="tab tab2">
+
+                    <div class="content-tab container">
+                        <div class="form-start">
+                            <form action>
+                                <div class="item-form">
+                                    <input type="text"
+                                        placeholder="Nhập Email của bạn">
+                                    <button>Tiếp</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="title-tab2">
+                            <h5>Truy cập sâu vào đầy đủ toàn bộ các mô hình thực
+                                tế</h5>
+                            <button onclick="openFormTab2('#00BF63')">Truy Cập</button>
+                        </div>
+
+                        <div class="content-tab2">
+                            <h2>Bcoo Hub<br> nền tảng thực tế và liên tục cập
+                                nhật</h2>
+
+                            <p>Những mô hình cách kiếm tiền, khởi nghiệp kinh
+                                doanh <b>đã thực hiện thành công trong thực tiễn</b></p>
+
+                            <p>Xu hướng, cơ hội kinh doanh <br> Cách làm giàu <b>bền
+                                    vững</b></p>
+
+                            <button onclick="openFormTab2('#00BF63')">Truy Cập
+                                Vào</button>
+                        </div>
+                    </div>
+
+                    <div class="draw">
+                        <img src="./publics/images/draw-tab2.png" width="100%" alt="">
+                    </div>
+
+                    <div class="draw-01">
+                        <img src="./publics/images/draw-tab2-02.png" width="100%" alt="">
+                    </div>
+
+                </div>
+
+                <!-- TAB 02 END -->
+
+                <div class="tab tab3">
+
+                    <div class="content-tab container">
+                       
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./publics/images/banner01.png" alt="" loading="lazy">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./publics/images/banner01.png" alt="" loading="lazy">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./publics/images/banner01.png" alt="" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
+
+            <!-- MAIN HOME END -->
 
         </div>
 
@@ -299,6 +390,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <!-- SCROLLIFI -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+
+        <script src="path/to/purefullpage.js"></script>
 
         <!-- SCRIPT SWIPPER -->
         <script>
@@ -321,7 +414,22 @@
                 },
             });
 
+            document.addEventListener("DOMContentLoaded", function() {
+                new PureFullPage({
+                    container: "main",
+                    section: ".tab",
+                });
+            });
+
+            /****/
+            /****/
+            /****/
+            /****/
+            /****/
+            
+
             // CHECK LOGIN
+
             if (localStorage.getItem("savedData")) {
                 // Lấy dữ liệu từ Local Storage và hiển thị nó trong phần tử
                 var savedData = localStorage.getItem("savedData");
