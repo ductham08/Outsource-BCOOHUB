@@ -437,8 +437,8 @@ body.active {
 @media (max-width: 768px) {
 
     .main .tab {
-        padding: 0px 10px;
-        margin: 5vw auto !important;
+        padding: 5vw 10px 5vw 10px;
+        margin: 0 auto !important;
     }
 
 }
