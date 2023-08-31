@@ -8,15 +8,13 @@
         <link rel="shortcut icon" href="./publics/images/favicon.png" type="image/x-icon">
         <title>Bcoo Hub</title>
 
-        <!-- CSS only -->
+        <!-- BASE CSS -->
         <link rel="stylesheet" href="./publics/css/style.css">
-
-        <!-- CSS Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <!-- CSS Animated -->
+        <!-- BOOSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- ANIMATION -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- SWIPPER -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     </head>
@@ -237,7 +235,7 @@
                                 <div class="news">
                                     <div class="content-news">
                                         <div class="title-news">
-                                            <h4>Một trong những cập nhật </h4>
+                                            <h4>Một trong những cập <br> nhật </h4>
                                             <h4 class="news-color">mới</h4>
                                             <h4>gần đây</h4>
                                         </div>
@@ -298,6 +296,10 @@
                         </div>
 
                     </div>
+
+                    <!-- <div class="draw-tab1">
+                        <img src="./publics/images/draw-tab1.png" width="100%" alt="">
+                    </div> -->
                 </div>
 
                 <!-- TAB 01 + HEADER END -->
@@ -340,6 +342,10 @@
                         <img src="./publics/images/draw-tab2.png" width="100%" alt="">
                     </div>
 
+                    <div class="draw-01">
+                        <img src="./publics/images/draw-tab2-02.png" width="100%" alt="">
+                    </div>
+
                 </div>
 
                 <!-- TAB 02 END -->
@@ -372,29 +378,23 @@
 
         </div>
 
-        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- SWIPER -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- FONTAWESOME -->
         <script src="https://kit.fontawesome.com/c29ec90d7d.js" crossorigin="anonymous"></script>
+        <!-- BOOSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- SCROLLIFI -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <!-- SCRIPT SWIPPER -->
         <script>
 
             AOS.init();
-
-            $(document).ready(function() {
-                $.scrollify({
-                    section: ".tab",
-                    scrollSpeed: 1000,
-                    easing: "easeOutExpo",
-                    setHeights: true,
-                    before: function(index) { },
-                    after: function(index) { }
-                });
-            });
 
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 1,
@@ -412,7 +412,14 @@
                 },
             });
 
-
+            $(document).ready(function() {
+                $.scrollify({
+                    section: ".tab", // Chọn class hoặc ID của các phần
+                    scrollSpeed: 300, // Tốc độ cuộn
+                    setHeights: true,
+                    overflowScroll: true,
+                });
+            });
 
             /****/
             /****/
@@ -457,7 +464,7 @@
                 
             // OPEND FORM
             const openForm = (color) => {
-                $('.content-right .form-start').toggleClass("active");
+                $('.content-right .form-start').addClass("active");
                 $('.main .content-right .form-start .item-form').css({
                     borderColor: color
                 });

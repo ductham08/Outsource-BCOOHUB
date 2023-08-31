@@ -431,6 +431,25 @@ body.active {
 
 .main .tab.tab-firt {
     display: block;
+    position: relative;
+}
+
+.main .tab.tab-firt .draw-tab1{
+    position: absolute;
+    width: 45%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-width: 769px) {
+    .main .tab.tab-firt .draw-tab1{
+        position: absolute;
+        width: 150%;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
 }
 
 .main .tab {
@@ -480,11 +499,11 @@ body.active {
 .login-form.active{
     transform: translateY(0%);
     transition: 0.8s ease-in-out;
-    z-index: 1;
+    z-index: 5;
 }
 
 .login-form form{
-    width: 100%;
+    width: 350px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -581,6 +600,8 @@ body.active {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 10vw auto;
+    position: relative;
+    z-index: 2;
 }
 
 .main .content-right .slogand b {
@@ -636,6 +657,10 @@ body.active {
     margin-left: 10px;
     width: 350px;
     box-shadow: 2px 2px 5px 1px #898989;
+}
+
+.main .content-left .form-start .item-form{
+    background-color: white;
 }
 
 .main .form-start {
@@ -733,7 +758,7 @@ body.active {
 .main .news .list-news .item-news p {
     font-family: "Noto-san-bold";
     margin: 0;
-    color: #334DFF;
+    color: #0008C8;
     text-decoration: none;
 }
 
@@ -905,6 +930,18 @@ body.active {
 .tab2 .draw{
     position: absolute;
     right: 2vw;
+    width: 200px;
+    z-index: 1;
+}
+
+.tab2{
+    position: relative;
+}
+
+.tab2 .draw-01{
+    position: absolute;
+    right: 20vw;
+    bottom: 4vw;
     width: 200px;
     z-index: 1;
 }
