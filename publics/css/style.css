@@ -432,23 +432,28 @@ body.active {
 .main .tab.tab-firt {
     display: block;
     position: relative;
+    overflow: hidden;
 }
 
 .main .tab.tab-firt .draw-tab1{
     position: absolute;
-    width: 45%;
+    width: 68%;
     left: 0;
     bottom: 0;
     z-index: 1;
+    height: 85%;
+    background-color: #0008C8;
+    transform: rotate(29deg) translateX(-20%) translateY(53%);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
     .main .tab.tab-firt .draw-tab1{
         position: absolute;
-        width: 150%;
+        width: 190%;
         left: 0;
         bottom: 0;
         z-index: 1;
+        transform: rotate(-20deg) translateX(-20%) translateY(46%);
     }
 }
 
@@ -479,7 +484,6 @@ body.active {
 .header{
     position: relative;
     z-index: 9;
-    background-color: white;
 }
 
 .login-form{
@@ -597,18 +601,32 @@ body.active {
 
 .main .tab1 {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10vw auto;
+    min-height: 85vh;
+    margin: 0 auto;
+    padding-top: 5vw !important;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+}
+
+.main .content-left {
+    margin-top: 60px;
+}
+
+.main .content-left .content-bottom {
+    padding-top: 13vw;
+    position: absolute;
+    bottom: 0;
+    left: -3%;
 }
 
 .main .content-right .slogand b {
     background-color: #EDF0FF;
     padding: 3px 10px;
     border-radius: 5px;
+    font-size: 20px;
     color: #0008C8;
     font-family: 'Open-san-bold';
 }
@@ -617,22 +635,23 @@ body.active {
     margin: 1.5vw 0;
 }
 
-.main .content-right .title-content h3 {
+.main .content-right .title-content h1 {
     font-family: 'Noto-san-bold';
     color: #1D1960;
     display: inline;
 }
 
-.main .content-right .title-content h3:nth-child(2) {
+.main .content-right .title-content h1:nth-child(2) {
     color: #CC9D00;
 }
 
-.main .content-right .title-content h3:nth-child(3) {
+.main .content-right .title-content h1:nth-child(3) {
     color: #334DFF;
 }
 
 .main .content-right .title-content h5 {
     color: #0E0990;
+    font-size: 20px;
     margin: 2vw 0;
 }
 
@@ -650,6 +669,7 @@ body.active {
 
 .main .form-start .item-form {
     display: flex;
+    background-color: white;
     align-items: center;
     border-radius: 10px;
     justify-content: space-between;
@@ -731,17 +751,13 @@ body.active {
     transition: 0.5s ease-in-out;
 }
 
-.main .content-left {
-    margin-top: 60px;
-}
-
-.main .news .title-news h4 {
+.main .news .title-news h2 {
     display: inline;
     font-family: 'Noto-san-bold';
-    color: #0008C8;
+    color: white;
 }
 
-.main .news .title-news h4.news-color {
+.main .news .title-news h2.news-color {
     color: #00BF63;
 }
 
@@ -759,13 +775,13 @@ body.active {
 .main .news .list-news .item-news p {
     font-family: "Noto-san-bold";
     margin: 0;
-    color: #0008C8;
+    color: white;
     text-decoration: none;
 }
 
 .main .news .list-news .item-news a {
     width: 70%;
-    color: #0E0990;
+    color: white;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -785,10 +801,21 @@ body.active {
     font-family: 'Open-san-bold';
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .main .content-left {
         order: 2;
         margin-top: 0;
+    }
+
+    .main .content-left .content-bottom {
+        padding-top: 13vw;
+        position: absolute;
+        bottom: 0;
+        left: 6.5%;
+    }
+
+    .main .tab1 {
+        min-height: 90vh;
     }
 
     .main .form-start form{
@@ -797,7 +824,6 @@ body.active {
 
     .main .form-start .item-form{
         width: 100%;
-        padding: 0px 10px !important;
     }
 
     .main .content-left .form-start {
