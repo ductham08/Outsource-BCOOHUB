@@ -43,7 +43,7 @@
                                         <a href="#">Về Bcoo</a>
                                     </li>
                                     <li>
-                                        <a class="login" href="#">Đăng nhập</a>
+                                        <a onclick="openLogin()" class="login" href="javascript:void(0)">Đăng nhập</a>
                                     </li>
                                 </ul>
                             </div>
@@ -52,15 +52,14 @@
                         <div class="header_mobile">
                             <div class="menu_set">
                                 <div class="container">
-                                    <div class="logo col-7">
+                                    <div class="logo col-md-7 col-6">
                                         <h3>B</h3>
                                         <h4>Bcoo Hub</h4>
                                     </div>
 
-                                    <div class="user-name col-5">
+                                    <div class="user-name col-md-5 col-6">
                                         <h6 class>Thuc Phuong</h6>
-                                        <a class="login active" href="#">Đăng
-                                            nhập</a>
+                                        <a onclick="openLogin()" class="login active" href="javascript:void(0)">Đăng nhập</a>
                                         <div class="btn_menu_mobile" onclick="handleLogin()">
                                             <div class="item_menu top"></div>
                                             <div class="item_menu center"></div>
@@ -197,6 +196,28 @@
                     <!-- HEADER END -->
 
                     <!-- MAIN HOME START -->
+
+                    <div class="login-form">
+                        <form action=""  class="col-md-3 col-12">
+                            <div class="item-form">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div class="item-form">
+                                <input id="input-field" type="password" placeholder="Password">
+                                
+                                <div class="show-pass" onclick="handleShowPass()">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <i class="fa-solid fa-eye-slash"></i>
+                                </div>
+                            </div>   
+                            <div class="item-form-btn">
+                                <button>Đăng nhập</button>
+                                <a href="#">Quên Mật Khẩu</a>
+                            </div>
+                        </form>    
+
+                        <p>Chưa có tài khoản? <b><a href="#">Đăng ký tạo mới</a></b></p>
+                    </div>
 
                     <div class="tab1 col-md-10 col-12">
 
@@ -394,6 +415,7 @@
             /****/
             /****/
             /****/
+            
 
             // CHECK LOGIN
 
@@ -411,25 +433,16 @@
 
             }
 
-
             // HEADER START
             const activeMenu = (element) => {
+                $('body').toggleClass('active');
                 $(".btn_menu_mobile").toggleClass("active");
                 $(element).toggleClass("active");
             }
                 
-            // CLOSE BOX
-            function close_box() {
-                $('.popup-gift').removeClass("active");
-                $('.popup').removeClass("active");
-                $('body').css('overflow', 'auto');
-            }
-            
-            
             // OPEND FORM
             const openForm = (color) => {
-                $('body').css('overflow', 'hidden');
-                $('.content-right .form-start').addClass("active");
+                $('.content-right .form-start').toggleClass("active");
                 $('.main .content-right .form-start .item-form').css({
                     borderColor: color
                 });
@@ -440,8 +453,7 @@
             
             // OPEND FORM
             const openFormTab2 = (color) => {
-                $('body').css('overflow', 'hidden');
-                $('.tab2 .form-start').addClass("active");
+                $('.tab2 .form-start').toggleClass("active");
                 $('.main .tab2 .form-start .item-form').css({
                     borderColor: color
                 });
@@ -452,14 +464,34 @@
 
             // OPEND FORM
             const openFormHeader = (color) => {
-                $('body').css('overflow', 'hidden');
-                $('.login-disable .form-start').addClass("active");
+                $('.login-disable .form-start').toggleClass("active");
                 $('.login-disable .form-start .item-form').css({
                     borderColor: color
                 });
                 $('.login-disable .form-start .item-form button').css({
                     backgroundColor: color
                 });
+            }
+
+            // OPEND FORM LOGIN
+            const openLogin = () => {
+                $('.login-form').toggleClass("active");
+                $('body').toggleClass('active');
+            }
+
+            // HANDLE TYPE PASSWORD
+            const handleShowPass = () => {
+                
+                var inputField = $("#input-field");
+                var currentType = inputField.attr("type");
+
+                if (currentType === "text") {
+                    inputField.attr("type", "password");
+                    $('.show-pass').removeClass("active");
+                } else {
+                    inputField.attr("type", "text");
+                    $('.show-pass').addClass("active");
+                }
             }
             
 

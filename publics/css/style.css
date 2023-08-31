@@ -4,6 +4,11 @@
     font-family: 'Roboto';
 }
 
+body::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+}
+
 @font-face {
     font-family: 'Open-san-bold';
     src: url("../fonts/OpenSans-Bold.ttf");
@@ -139,6 +144,7 @@
 .main-source {
     position: relative;
     overflow: hidden;
+    background-color: white ;
 }
 
 /* Restart end */
@@ -231,7 +237,7 @@ body.active {
         margin-right: 10px;
         color: #344EFE;
         padding: 3px 10px;
-        font-size: 10px;
+        font-size: 14px;
         border-radius: 8px;
         box-shadow: 0px 0px 3px #344EFE;
         border: 1px solid #BAC3FE;
@@ -437,11 +443,133 @@ body.active {
 @media (max-width: 768px) {
 
     .main .tab {
-        padding: 5vw 10px 5vw 10px;
+        padding: 5vw 10px 5vw 10px !important;
         margin: 0 auto !important;
     }
 
 }
+
+
+/* LOGIN FORM START */
+
+.header{
+    position: relative;
+    z-index: 9;
+    background-color: white;
+}
+
+.login-form{
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-150%);
+    transition: 0.8s ease-in-out;
+}
+
+.login-form.active{
+    transform: translateY(0%);
+    transition: 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.login-form form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px !important;
+}
+
+.login-form form input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.login-form form .item-form{
+    background-color: white;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1.5px solid gainsboro;
+}
+
+.login-form form .item-form-btn{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.login-form form .item-form .show-pass{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 11px 5px;
+}
+
+.login-form form .item-form .show-pass i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-form form .item-form .show-pass.active i.fa-eye{
+    display: block;
+}
+
+.login-form form .item-form .show-pass.active i.fa-eye-slash{
+    display: none;
+}
+
+.login-form a{
+    text-decoration: none !important;
+}
+
+.login-form form button{
+    outline: none;
+    border: none;
+    background-color: #0008C8;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+/* LOGIN FORM END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* TAB 01 START */
 
 .main .tab1 {
     display: flex;
@@ -558,6 +686,13 @@ body.active {
     background-color: #00BF63;
 }
 
+.main .content-left .form-start {
+    opacity: 1;
+    z-index: 1;
+    height: auto;
+    transition: 0.5s ease-in-out;
+}
+
 .main .content-left {
     margin-top: 60px;
 }
@@ -618,8 +753,13 @@ body.active {
         margin-top: 0;
     }
 
+    .main .form-start form{
+        padding: 0px 10px !important;
+    }
+
     .main .form-start .item-form{
         width: 100%;
+        padding: 0px 10px !important;
     }
 
     .main .content-left .form-start {
