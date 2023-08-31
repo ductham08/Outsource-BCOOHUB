@@ -456,6 +456,7 @@ body.active {
     display: flex;
     flex-direction: column;
     padding: 2vw 0px;
+    min-height: 100vh;
     align-content: center;
     align-items: center;
     flex-direction: row;
@@ -942,7 +943,7 @@ body.active {
     position: absolute;
     right: 20vw;
     bottom: 4vw;
-    width: 200px;
+    width: 150px;
     z-index: 1;
 }
 

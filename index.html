@@ -22,7 +22,7 @@
     <body>
         <div class="main-source">
 
-            <div class="main">
+            <div class="main" id="main">
 
                 <div class="tab tab-firt">
                     <!-- HEADER START -->
@@ -391,6 +391,8 @@
         <!-- SCROLLIFI -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 
+        <script src="path/to/purefullpage.js"></script>
+
         <!-- SCRIPT SWIPPER -->
         <script>
 
@@ -412,12 +414,10 @@
                 },
             });
 
-            $(document).ready(function() {
-                $.scrollify({
-                    section: ".tab", // Chọn class hoặc ID của các phần
-                    scrollSpeed: 300, // Tốc độ cuộn
-                    setHeights: true,
-                    overflowScroll: true,
+            document.addEventListener("DOMContentLoaded", function() {
+                new PureFullPage({
+                    container: "main",
+                    section: ".tab",
                 });
             });
 
