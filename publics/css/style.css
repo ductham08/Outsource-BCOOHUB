@@ -330,6 +330,10 @@ body.active {
         transition: 0.8s ease-in-out;
     }
 
+    .header .header_mobile .menu_move.login-active {
+        padding: 0px 10px;
+    }
+
     .header .header_mobile .menu_move b {
         font-size: 18px;
     }
@@ -638,7 +642,6 @@ body.active {
     position: relative;
     opacity: 0;
     z-index: -1;
-    height: 0;
     transition: 0.5s ease-in-out;
 }
 
@@ -647,7 +650,16 @@ body.active {
     opacity: 1;
     z-index: 2;
     transition: 0.5s ease-in-out;
-    height: inherit;
+}
+
+.main .login-disable .form-start {
+    height: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.main .login-disable .form-start.active {
+    height: auto;
+    transition: 0.5s ease-in-out;
 }
 
 .main .form-start .item-form input {

@@ -58,7 +58,7 @@
                                     </div>
 
                                     <div class="user-name col-md-5 col-6">
-                                        <h6 class>Thuc Phuong</h6>
+                                        <h6 class="user-name user-active">Thuc Phuong</h6>
                                         <a onclick="openLogin()" class="login active" href="javascript:void(0)">Đăng nhập</a>
                                         <div class="btn_menu_mobile" onclick="handleLogin()">
                                             <div class="item_menu top"></div>
@@ -211,7 +211,7 @@
                                 </div>
                             </div>   
                             <div class="item-form-btn">
-                                <button>Đăng nhập</button>
+                                <button onclick="setActiveLogin()">Đăng nhập</button>
                                 <a href="#">Quên Mật Khẩu</a>
                             </div>
                         </form>    
@@ -425,12 +425,23 @@
                 $("#hidden-div").html(savedData);
             }
 
+            const setActiveLogin = () => {
+                localStorage.setItem('login', JSON.stringify(true));
+            }
+
             const activeLogin = localStorage.getItem("login") ? true : false;
+            console.log(activeLogin);
 
             const handleLogin = () => {
 
                 !activeLogin ? activeMenu('.login-disable') : activeMenu('.login-active')
 
+            }
+
+            // ACTIVE USER NAME
+            if(activeLogin){
+                $('.menu_set .user-active').addClass('active');
+                $('.user-name .login').removeClass('active');
             }
 
             // HEADER START
