@@ -851,6 +851,8 @@ body.active {
 .tab2 .content-tab {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 3;
 }
 
 .tab2 .content-tab .form-start {
@@ -898,6 +900,13 @@ body.active {
     outline: none;
     margin: 3vw 0;
     padding: 6px 25px;
+}
+
+.tab2 .draw{
+    position: absolute;
+    right: 2vw;
+    width: 200px;
+    z-index: 1;
 }
 
 @media (max-width:767px) {
