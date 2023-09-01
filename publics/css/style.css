@@ -131,12 +131,14 @@ body::-webkit-scrollbar {
     bottom: 0;
     max-height: 100vh;
     min-height: 100vh;
+    height: 100vh;
     margin: auto;
 }
 
 .main .tab {
     min-height: 100vh;
     max-height: 100vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -326,6 +328,7 @@ body.active {
         opacity: 0.5;
         transform: translateX(100%);
         min-height: 100vh;
+        height: 100vh;
         transition: 0.8s ease-in-out;
     }
 
