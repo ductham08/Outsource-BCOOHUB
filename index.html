@@ -221,7 +221,7 @@
                     <!-- CONTENT TAB-1 START -->
                     <div class="content-tab1 content-tab-container">
                         <div class="content-left col-md-6 col-12">
-                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-9">
                                 <form action>
                                     <div class="item-form">
                                         <input type="text"
@@ -239,12 +239,12 @@
                                 </div>
 
                                 <div class="list-news col-12">
-                                    <div class="item-news">
-                                        <a href="#" class="text-css">Dùng vốn 10 triệu, tạo kế hoạch khởi nghiệp kiếm 200 triệu/tháng</a>
+                                    <div class="item-news item-firt">
+                                        <a href="#">Dùng vốn 10 triệu, tạo kế hoạch khởi nghiệp kiếm 200 triệu/tháng</a>
                                         <p class="date">26/08/2023</p>
                                     </div>
 
-                                    <div class="item-news" >
+                                    <div class="item-news item-second" >
                                         <a href="#" class="text-css">Mô hình thu 60 triệu/tháng được cập nhật</a>
                                         <p class="date">26/08/2023</p>
                                     </div>
@@ -322,6 +322,10 @@
                     delay: 1500,
                 },
             });
+
+            setTimeout(() => {
+                $('.list-news .item-second').addClass('active')
+            }, 1000)
 
 
             // CHECK LOGIN

@@ -24,9 +24,24 @@ body::-webkit-scrollbar {
     src: url("../fonts/NotoSans-Bold.ttf");
 }
 
-@keyframes textclip {
-    to {
-        background-position: 200% center;
+@keyframes textIn {
+    0% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes textOut {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
     }
 }
 
@@ -660,6 +675,10 @@ body.active {
     border-color: #00BF63;
 }
 
+.content-tab1 .content-left .form-start .item-form button {
+    background-color: #00BF63;
+}
+
 .content-tab1 .title-news {
     margin-bottom: 2vw;
 }
@@ -694,22 +713,18 @@ body.active {
     overflow: hidden;
     color: #fff;
     text-overflow: ellipsis;
-    background-image: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-.content-tab1 .list-news .item-news a:nth-child(1) {
-    animation: textclip 2s linear infinite;
+.content-tab1 .list-news .item-news:nth-child(1) {
+    animation: textIn 1s ease-in;
 }
 
-.content-tab1 .list-news .item-news a:nth-child(2) {
-    animation: textclip 3s linear infinite;
+.content-tab1 .list-news .item-news:nth-child(2) {
+    opacity: 0;
+}
+
+.content-tab1 .list-news .item-news.active:nth-child(2) {
+    animation: textOut 2s infinite ease-in-out;
 }
 
 .content-tab1 .list-news .item-news a,
@@ -754,7 +769,7 @@ body.active {
 
     .content-tab1 .draw {
         width: 200%;
-        transform: rotate(-24deg) translateX(-28.5%) translateY(51%);
+        transform: rotate(-16deg) translateX(-28.5%) translateY(59%);
     }
 
     .content-tab1 .btn-active-form {
