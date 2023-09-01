@@ -232,7 +232,7 @@
                             </div>
                             <!-- | -->
                             <div class="content col-lg-4 col-md-5 col-12">
-                                <div class="title-news col-lg-10 col-md-9 col-12">
+                                <div class="title-news col-lg-10 col-md-9 col-9">
                                     <h2>Một trong những cập nhật </h2>
                                     <h2 class="news-color">mới</h2>
                                     <h2>gần đây</h2>
@@ -248,7 +248,7 @@
                                         <a href="#" class="text-css">Mô hình thu 60 triệu/tháng được cập nhật</a>
                                         <p class="date">26/08/2023</p>
                                     </div>
-                                    <button class="btn-active-form" onclick="openFormColor('#E4C911')">Truy Cập</button>
+                                    <button class="btn-active-form" onclick="openForm('#E4C911')">Truy Cập</button>
                                 </div>
 
                             </div>
@@ -361,14 +361,9 @@
                 $(element).toggleClass("active");
             }
                 
-            // OPEND FORM
-            const openForm = (color) => {
-                $('.content-right .form-start').toggleClass("active");
-            }
-
             // OPEND FORM Color
-            const openFormColor = (color) => {
-                $('.content-right .form-start').toggleClass("active");
+            const openForm = (color) => {
+                $('.content-right .form-start').addClass("active");
                 $('.main .content-right .form-start .item-form').css({
                     borderColor: color
                 });

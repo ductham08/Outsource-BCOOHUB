@@ -555,9 +555,9 @@ body.active {
     align-items: center;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 0px 0px 0px 10px;
+    padding: 2px 2px 2px 10px;
     border: 1.5px solid #6678fd;
-    box-shadow: 2px 2px 5px 1px #898989;
+    box-shadow: 2px 3px 4px 1px #bbbbbb;
     background-color: white;
     width: 100%;
 }
@@ -629,7 +629,7 @@ body.active {
     background-color: #EDF0FF;
     padding: 3px 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
     color: #0008C8;
     font-family: 'Open-san-bold';
 }
@@ -782,6 +782,28 @@ body.active {
     .content-tab1 .list-news .item-news {
         border-left: 3px solid #CBA304;
         padding-left: 5px;
+    }
+
+    .content-tab1 .description{
+        color: #0B0B89;
+    }
+
+    .content-tab1 .slogand{
+        font-size: 16px;
+    }
+
+    .content-tab1 .title{
+        margin: 4vw 0;
+    }
+
+    .login-form form{
+        width: 100%;
+    }
+
+    .content-tab1 .content-left .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
 }
