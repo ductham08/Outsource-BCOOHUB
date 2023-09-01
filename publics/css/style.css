@@ -747,7 +747,7 @@ body.active {
     bottom: 0;
     z-index: 1;
     height: 100%;
-    background-color: #0008C8;
+    background-color: #344FFF;
     transform: rotate(20deg) translateX(-39.5%) translateY(65%);
 }
 
