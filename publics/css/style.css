@@ -564,6 +564,7 @@ body.active {
     margin: 5px auto;
     padding: 0px 10px;
     transform: scale(0);
+    height: 0;
 }
 
 .form-start form{
@@ -572,6 +573,7 @@ body.active {
 
 .form-start.active {
     transform: scale(1);
+    height: min-content;
     position: relative;
     opacity: 1;
     transition: 0.5s ease-in-out;
