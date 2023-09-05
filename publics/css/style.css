@@ -121,7 +121,6 @@ body::-webkit-scrollbar {
 }
 
 .main {
-    overflow: hidden;
     background-color: white;
     top: 0;
     position: relative;
@@ -140,6 +139,7 @@ body::-webkit-scrollbar {
     max-height: 100vh;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -148,8 +148,9 @@ body.active {
 }
 
 @media (max-width: 769px) {
-    .main {
-        padding: 0px 10px !important;
+    .main .tab {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }
 
@@ -215,18 +216,57 @@ body.active {
     font-family: 1vw;
     transition: 0.4s ease-in-out;
     text-decoration: none;
+    transition: 0.45s ease-in-out;
 }
 
-.header a.login {
+.header .user-name .login {
     color: #344EFE;
     padding: 5px 12px;
     border-radius: 10px;
     box-shadow: 0px 0px 3px #344EFE;
     border: 1px solid #BAC3FE;
+    transition: 0.45s ease-in-out;
+    display: none;
+}
+
+.header .user-name .login::after {
+    content: "Đăng nhập";
+    transition: 0.45s ease-in-out;
+}
+
+.header .user-name .login.active-content {
+    border-radius: 50px;
+    transition: 0.45s ease-in-out;
+}
+
+.header .user-name .login.active-content::after {
+    transition: 0.45s ease-in-out;
+    content: "x";
+}
+
+.header a.login.active {
+    display: block;
 }
 
 .header .header_mobile {
     display: none;
+}
+
+.header .user-name {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header .user-name h6 {
+    margin: 0 10px;
+    font-weight: 700;
+    color: #344EFE;
+    display: none;
+}
+
+.header .user-name h6.active {
+    display: block;
 }
 
 @media (max-width:767px) {
@@ -300,23 +340,6 @@ body.active {
     .header .header_mobile .btn_menu_mobile.active .item_menu.bottom {
         transform: translate3d(0px, -9px, 0px) rotate(-45deg);
         transition: 0.8s ease-in-out;
-    }
-
-    .header .header_mobile .user-name {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .header .header_mobile .user-name h6 {
-        margin: 0 10px;
-        font-weight: 700;
-        color: #344EFE;
-        display: none;
-    }
-
-    .header .header_mobile .user-name h6.active {
-        display: block;
     }
 
     .header .header_mobile .menu_move {
@@ -540,11 +563,15 @@ body.active {
     transition: 0.5s ease-in-out;
     margin: 5px auto;
     padding: 0px 10px;
-    height: 0;
+    transform: scale(0);
+}
+
+.form-start form{
+    width: 100%;
 }
 
 .form-start.active {
-    height: auto;
+    transform: scale(1);
     position: relative;
     opacity: 1;
     transition: 0.5s ease-in-out;
@@ -563,11 +590,12 @@ body.active {
 }
 
 .login-disable .form-start {
-    height: 0;
+    transform: scale(0);
     transition: 0.5s ease-in-out;
 }
 
 .login-disable .form-start.active {
+    transform: scale(1);
     height: auto;
     transition: 0.5s ease-in-out;
 }
@@ -577,7 +605,7 @@ body.active {
     outline: none;
     border: none;
     font-family: 'Open-san-bold';
-    width: 50%;
+    width: 60%;
 }
 
 .form-start .item-form input::placeholder {
@@ -602,7 +630,13 @@ body.active {
     background-color: #00BF63;
 }
 
-/* FORM START */
+@media (max-width: 767px) {
+    .form-start .item-form input{
+        width: 65%;
+    }
+}
+
+/* FORM START END */
 
 /*  */
 /*  */
@@ -672,6 +706,7 @@ body.active {
 .content-tab1 .content-left .form-start {
     opacity: 1;
     height: auto;
+    transform: scale(1);
 }
 
 .content-tab1 .content-left .form-start .item-form {
@@ -695,7 +730,6 @@ body.active {
 .content-tab1 .content-left .content {
     position: absolute;
     bottom: 0;
-    left: 0;
 }
 
 .content-tab1 .content-left .title-news h2.news-color {
@@ -720,10 +754,6 @@ body.active {
 
 .content-tab1 .list-news .item-news:nth-child(1) {
     animation: textIn 1s ease-in;
-}
-
-.content-tab1 .list-news .item-news:nth-child(2) {
-    opacity: 0;
 }
 
 .content-tab1 .list-news .item-news.active:nth-child(2) {
@@ -751,18 +781,44 @@ body.active {
     z-index: 1;
     height: 100%;
     background-color: #344FFF;
-    transform: rotate(20deg) translateX(-39.5%) translateY(65%);
+    transform: rotate(20deg) translateX(-37.5%) translateY(59%);
 }
 
 .content-tab1 .content-right {
     z-index: 2;
 }
 
-@media (max-width: 767px) {
+.draw-icon-poly,
+.draw-icon-right{
+    display: none;
+}
 
+@media (max-width: 767px) {
+    .draw-icon-poly{
+        display: block;
+        width: 15vw;
+        position: absolute;
+        left: 7vw;
+        top: 15vw;
+    }
+
+    .hide{
+        display: none !important;
+    }
+
+    .draw-icon-right{
+        display: block;
+        width: 17vw;
+        position: absolute;
+        right: 7vw;
+        top: 14vw;
+        transform: rotate(-210deg);
+    }
+    
     .content-tab1 .content-right {
         z-index: 2;
         order: 1;
+        margin-top: 10vw;
     }
 
     .content-tab1 .content-left {
@@ -807,3 +863,113 @@ body.active {
     }
 
 }
+
+/* TAB 2 START */
+
+
+.tab2 {
+    display: flex;
+    background-color: #FDF9E8;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 35px !important;
+}
+
+.tab2 .icon-next svg{
+    width: 35px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+.tab2 .title-tab2{
+    margin: auto;
+}
+
+.tab2 .title-tab2 h4 {
+    font-family: 'Open-san-bold';
+    text-align: center;
+    color: #CC9D00;
+}
+
+.tab2 .title-tab2 .desc-tab2 button {
+    font-family: 'Open-san-bold';
+    text-align: center;
+    background-color: #E4C911;
+    color: #A07C00;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 3vw auto;
+    padding: 6px 25px;
+    border-radius: 50px;
+}
+
+.tab2 .content-tab2 h2 {
+    font-family: 'Noto-san-bold';
+    color: #1D1960;
+    display: inline;
+    background: linear-gradient(90deg, rgba(228, 186, 7, 1) 0%, rgba(200, 156, 0, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tab2 .content-tab2 {
+    margin: 3vw 0;
+}
+
+.tab2 .content-tab2 p {
+    margin: 1.5vw 0;
+}
+
+.tab2 .content-tab2 button {
+    font-family: 'Open-san-bold';
+    text-align: center;
+    background-color: #E4B200;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 3vw 0;
+    padding: 6px 25px;
+}
+
+.tab2 .draw{
+    position: absolute;
+    right: 2vw;
+    width: 200px;
+    z-index: 1;
+}
+
+.tab2 .draw-01{
+    position: absolute;
+    right: 20vw;
+    bottom: 4vw;
+    width: 150px;
+    z-index: 1;
+}
+
+.tab2 .container{
+    z-index: 2;
+}
+
+.tab2 .form-start{
+    margin: 1.5vw auto;
+}
+
+
+@media (max-width:767px) {
+    .tab2 .draw{
+        display: none;
+    }
+        
+    .tab2 .form-start{
+        margin: 4vw auto;
+    }
+
+
+}
+
+
+/* TAB 2 END */

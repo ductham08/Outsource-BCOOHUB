@@ -101,7 +101,6 @@ body::-webkit-scrollbar {
 
 .main-source {
     position: relative;
-    overflow: hidden;
     background-color: white ;
 }
 
