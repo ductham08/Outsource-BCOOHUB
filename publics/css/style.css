@@ -628,6 +628,11 @@ body.active {
     border-radius: 8px;
 }
 
+.form-start .item-form button a{
+    color: white;
+    text-decoration: none;
+}
+
 .form-start .content-left button {
     background-color: #00BF63;
 }
@@ -862,6 +867,7 @@ body.active {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        margin-bottom: -27px;
     }
 
 }
@@ -975,3 +981,233 @@ body.active {
 
 
 /* TAB 2 END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* TAB 3 START */
+
+.tab3 .container{
+    padding: 2vw 0 !important;
+}
+
+
+/* TAB 3 END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* SIGNIN PAGE START */
+
+.navbar-page{
+    padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-page h3{
+    font-weight: 700;
+    color: white;
+    background-color: #344EFE;
+    display: inline;
+    padding: 1px 9px;
+    border-radius: 100%;
+    margin: 0;
+    font-family: 'Open-san-bold';
+}
+
+.navbar-page h4{
+    font-weight: 700;
+    font-family: 'Open-san-bold';
+}
+
+.navbar-page .col-4:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-page a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.navbar-page a i {
+    font-size: 25px;
+}
+
+.main-signIn-page{
+    max-width: 680px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: auto;
+}
+
+.main-signIn-page .form-info{
+    margin: 2vw auto;
+}
+
+.main-signIn-page .content-page{
+    margin: auto;
+}
+
+.main-signIn-page .form-info form input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 4px 10px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.main-signIn-page .form-info form .item-form {
+    background-color: white;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1.5px solid gainsboro;
+}
+
+.main-signIn-page .form-info form b{
+    padding-top: 5px;
+    display: block;
+}
+
+.main-signIn-page .form-info form .item-form .show-pass {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 11px 5px;
+}
+
+.main-signIn-page .form-info form .item-form .show-pass i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main-signIn-page .form-info form .item-form .show-pass.active i.fa-eye {
+    display: block;
+}
+
+.main-signIn-page .form-info form .item-form .show-pass.active i.fa-eye-slash {
+    display: none;
+}
+
+.main-signIn-page .content-page .desc {
+    margin: 35px auto;
+}
+
+.main-signIn-page .content-page .desc h3{
+    font-family: 'Noto-san-bold';
+}
+
+.main-signIn-page .content-page .desc .item-docs{
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 10px !important;
+}
+
+.main-signIn-page .content-page .desc .item-docs i{
+    margin-right: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.main-signIn-page .content-page .desc .item-docs i{
+    margin-right: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.main-signIn-page .content-page .btn-next-step{
+    margin: auto;
+}
+
+.main-signIn-page .content-page .btn-next-step button{
+    width: 100%;
+    font-family: 'Open-san-bold';
+    color: white;
+    margin: 1.5vw auto;
+    padding: 7px 45px;
+    border-radius: 50px;
+    background-color: #334DFF;
+    outline: none;
+    border: none;
+    display: block;
+}
+
+.main-signIn-page .content-page .btn-next-step button a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-signIn-page .form-info .item-select input{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.main-signIn-page .form-info .item-select{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main-signIn-page .form-info .item-select b{
+    display: inline;
+    color: black;
+    margin: 0;
+}
+
+.main-signIn-page .form-info .item-select p{
+    margin: 0;
+    color: #898989;
+}
+
+.main-signIn-page .item-docs-date p{
+    margin: 0;
+    color: #898989;
+}
+
+.main-signIn-page .item-docs-date{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.main-signIn-page .bank-account{
+    margin-bottom: 25px;
+}
+
+.main-signIn-page .bank-account p{
+    margin: 0;
+}
+
+.main-signIn-page .bank-account .logo{
+    margin: 0 auto;
+}
+
+
+/* SIGNIN PAGE END */

@@ -23,6 +23,7 @@
 
         <div class="main">
 
+            <!-- TAB 1 START -->
             <div class="tab tab-1">
 
                 <!-- HEADER START -->
@@ -225,7 +226,7 @@
                             <form action>
                                 <div class="item-form">
                                     <input type="text"  placeholder="Nhập Email của bạn">
-                                    <button>Bắt đầu</button>
+                                    <button><a href="./signIn.html">Bắt đầu</a></button>
                                 </div>
                             </form>
                         </div>
@@ -299,6 +300,7 @@
                 </div>
                 <!-- CONTENT TAB-1 END -->
             </div>
+            <!-- TAB 1 END -->
 
             <!-- TAB 2 START -->
             <div class="tab tab2">
@@ -318,7 +320,7 @@
                                     <div class="item-form">
                                         <input type="text"
                                             placeholder="Nhập Email của bạn">
-                                        <button>Bắt đầu</button>
+                                        <button><a href="./signIn.html">Bắt đầu</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -336,7 +338,7 @@
                                     <div class="item-form">
                                         <input type="text"
                                             placeholder="Nhập Email của bạn">
-                                        <button>Bắt đầu</button>
+                                        <button><a href="./signIn.html">Bắt đầu</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -357,12 +359,11 @@
                             Vào</button>
 
                         <div id="content-tab2">
-                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+                            <div class="form-start col-xl-4 col-lg-5 col-md-7 col-12">
                                 <form action>
                                     <div class="item-form">
-                                        <input type="text"
-                                            placeholder="Nhập Email của bạn">
-                                        <button>Bắt đầu</button>
+                                        <input type="text" placeholder="Nhập Email của bạn">
+                                        <button><a href="./signIn.html">Bắt đầu</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -380,6 +381,16 @@
 
             </div>
             <!-- TAB 2 END -->
+
+            <!-- TAB 3 START -->
+            <div class="tab tab3" id="tab3">
+                <div class="container">
+                    <!-- <div class="title-tab3">
+                        <h3>Đã được những người sáng lập thực hiện thành công trong thực tiễn</h3>
+                    </div> -->
+                </div>
+            </div>
+            <!-- TAB 3 END -->
 
         </div>
 
@@ -403,29 +414,12 @@
 
             AOS.init();
 
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                autoplay: {
-                    delay: 1500,
-                },
-            });
-
             setTimeout(() => {
-                $('.list-news .item-second').addClass('active')
+                $('.list-news . -second').addClass('active')
             }, 1000)
 
 
             // CHECK LOGIN
-
             const setActiveLogin = () => {
                 localStorage.setItem('login', JSON.stringify(true));
             }
@@ -509,13 +503,11 @@
             }
 
 
-            // $(document).ready(function() {
-                    
-            //     if ($('.content-tab1 .form-start.active').length == 2) {
-            //         $('.content-tab1 .form-start').removeClass('active');
-            //     }
-            // });
+            //    SLIDER TAB 3 START
 
+
+
+            //    SLIDER TAB 3 END
 
 
 

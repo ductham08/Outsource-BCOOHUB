@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./publics/images/favicon.png" type="image/x-icon">
+        <title>Bcoo Hub</title>
+
+        <!-- BASE CSS -->
+        <link rel="stylesheet" href="./publics/css/style.css">
+        <!-- BOOSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- ANIMATION -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- SWIPPER -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    </head>
+
+    <body>
+
+        <div class="main-signIn-page">
+
+            <div class="navbar-page">
+                <div class="col-4">
+                    <a href="./index.html">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4>Chọn gói</h4>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            
+
+            <div class="content-page col-md-8 col-12">
+                
+                <div class="desc">
+
+                    <div class="item-docs">
+                        <i style="margin-top: 2px; color: #1CBD74;" class="fa-solid fa-check"></i>
+                        <p>Mới bắt đầu, chúng tôi khuyên bạn nên chọn Gói tháng</p>
+                    </div>
+
+                    <!-- FORM START -->
+                    <div class="form-info">
+                        <form >
+                            <div class="item-select">
+                                <input type="radio" id="month" name="box" checked>
+                                <div class="option col-10">
+                                    <label for="month">
+                                        <b>Gói tháng</b>
+                                        <p><b>59.000đ</b></p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="item-select">
+                                <input type="radio" id="thre-month" name="box">
+                                <div class="option col-10">
+                                    <label for="thre-month">
+                                        <b>Gói 03 tháng</b>
+                                        <p><b>179.000đ</b> (đã gồm tổng 03 tháng)</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>    
+                    </div>
+                    <!-- FORM END -->
+
+                    <div class="item-docs-date">
+                        <div class="col-6">
+                            <p>Sử dụng đến</p>
+                            <p>20 tháng 08 2024 </p>
+                        </div>
+                        <b>59.000đ</b>
+                    </div>
+
+                    
+                    
+                    <p>Mã đơn hàng của bạn là: <b>123MBG</b></p>
+                    <p>Nhập mã đơn trên trong nội dung thanh toán. Sau khi thanh toán chuyển khoản, bạn <b>nhấn Hoàn Thành.</b> <i>Trong 1 - 20 giờ, chúng tôi sẽ kích hoạt tài khoản của bạn để truy cập vào hệ thống.</i></p>
+
+                    <div class="bank-account">
+                        <div class="logo col-md-6 col-8">
+                            <img src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-TCB-H.png" width="100%" alt="">
+                        </div>
+                        <p>Chủ tài khoản: <b>Trần Văn A</b></p>
+                        <p>Số tài khoản: <b>0123 456 789</b></p>
+                        <p>Ngân hàng: <b>Techcom Bank</b> chi nhánh B</p>
+                    </div>
+                    
+                    <div class="btn-next-step col-md-6 col-12">
+                        <button>Hoàn thành</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- SWIPER -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- FONTAWESOME -->
+        <script src="https://kit.fontawesome.com/c29ec90d7d.js" crossorigin="anonymous"></script>
+        <!-- BOOSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- SCROLLIFI -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+        <!-- ANIMATE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+
+        <!-- SCRIPT SWIPPER -->
+        <script>
+
+            AOS.init();
+
+            // HANDLE TYPE PASSWORD
+            const handleShowPass = () => {
+                
+                var inputField = $("#input-field");
+                var currentType = inputField.attr("type");
+
+                if (currentType === "text") {
+                    inputField.attr("type", "password");
+                    $('.show-pass').removeClass("active");
+                } else {
+                    inputField.attr("type", "text");
+                    $('.show-pass').addClass("active");
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
