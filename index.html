@@ -230,7 +230,7 @@
                             </form>
                         </div>
                         <!-- | -->
-                        <div class="content col-lg-4 col-md-5 col-12">
+                        <div class="content col-lg-4 col-md-5 col-11">
                             <div class="title-news col-lg-10 col-md-9 col-9">
                                 <h2>Một trong những cập nhật </h2>
                                 <h2 class="news-color">mới</h2>
@@ -305,26 +305,41 @@
 
                 <div class="container">
                     <div class="title-tab2 col-md-6 col-12">
-                        <div class="icon-next"  onclick="openFormTab2('#E4C911')">
+                        <div class="icon-next"  onclick="openFormTab2('#E4C911', '#form-icon-next')">
                             <svg width="100%" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="64" cy="64" r="64" fill="#3C5BFF"/>
                                 <path d="M33 48L64.5045 80L96 48" stroke="white" stroke-width="12"/>
                             </svg>
                         </div>
-                        <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
-                            <form action>
-                                <div class="item-form">
-                                    <input type="text"
-                                        placeholder="Nhập Email của bạn">
-                                    <button>Bắt đầu</button>
-                                </div>
-                            </form>
+
+                        <div id="form-icon-next">
+                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+                                <form action>
+                                    <div class="item-form">
+                                        <input type="text"
+                                            placeholder="Nhập Email của bạn">
+                                        <button>Bắt đầu</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
         
                         <div class="desc-tab2">
                             <h4>Truy cập sâu vào đầy đủ toàn bộ các mô hình thực
                                 tế</h4>
-                            <button onclick="openFormTab2('#E4C911')">Truy Cập</button>
+                            <button onclick="openFormTab2('#E4C911', '#formButonNext')">Truy Cập</button>
+                        </div>
+
+                        <div id="formButonNext">
+                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+                                <form action>
+                                    <div class="item-form">
+                                        <input type="text"
+                                            placeholder="Nhập Email của bạn">
+                                        <button>Bắt đầu</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
@@ -338,8 +353,20 @@
                         <p>Xu hướng, cơ hội kinh doanh <br> Cách làm giàu <b>bền
                                 vững</b></p>
 
-                        <button onclick="openFormTab2('#00BF63')">Truy Cập
+                        <button class="btn-opend-form" onclick="openFormTab2('#00BF63', '#content-tab2')">Truy Cập
                             Vào</button>
+
+                        <div id="content-tab2">
+                            <div class="form-start col-xl-7 col-lg-8 col-md-11 col-12">
+                                <form action>
+                                    <div class="item-form">
+                                        <input type="text"
+                                            placeholder="Nhập Email của bạn">
+                                        <button>Bắt đầu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -436,12 +463,14 @@
             }
             
             // OPEND FORM
-            const openFormTab2 = (color) => {
-                $('.tab2 .form-start').toggleClass("active");
-                $('.main .tab2 .form-start .item-form').css({
+            const openFormTab2 = (color, element) => {
+
+                $('.tab2 .form-start').removeClass("active");
+                $(element + ' .form-start').toggleClass("active");
+                $(element + ' .form-start .item-form').css({
                     borderColor: color
                 });
-                $('.main .tab2 .form-start .item-form button').css({
+                $(element + ' .form-start .item-form button').css({
                     backgroundColor: color
                 });
             }

@@ -149,8 +149,8 @@ body.active {
 
 @media (max-width: 769px) {
     .main .tab {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
 
@@ -783,7 +783,7 @@ body.active {
     z-index: 1;
     height: 100%;
     background-color: #344FFF;
-    transform: rotate(20deg) translateX(-37.5%) translateY(59%);
+    transform: rotate(18deg) translateX(-43.5%) translateY(59%);
 }
 
 .content-tab1 .content-right {
@@ -798,10 +798,10 @@ body.active {
 @media (max-width: 767px) {
     .draw-icon-poly{
         display: block;
-        width: 15vw;
+        width: 12vw;
         position: absolute;
-        left: 7vw;
-        top: 15vw;
+        left: 35vw;
+        top: 14vw;
     }
 
     .hide{
@@ -926,7 +926,7 @@ body.active {
     margin: 1.5vw 0;
 }
 
-.tab2 .content-tab2 button {
+.tab2 .content-tab2 .btn-opend-form {
     font-family: 'Open-san-bold';
     text-align: center;
     background-color: #E4B200;
