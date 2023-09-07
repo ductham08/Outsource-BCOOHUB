@@ -1390,7 +1390,7 @@ body.active {
 .news-page .content-news{
     width: 85%;
     padding: 15px;
-    height: 100vh;
+    height: 95vh;
     overflow: auto;
 }
 
@@ -1556,18 +1556,82 @@ body.active {
     padding-right: 15px !important;
     display: block;
   	display: -webkit-box;
-  	-webkit-line-clamp: 13;  /* số dòng hiển thị */
+  	-webkit-line-clamp: 2;  /* số dòng hiển thị */
   	-webkit-box-orient: vertical;
   	overflow: hidden;
   	text-overflow: ellipsis;
+    margin: 2px 0px;
 }
+
+.list-news .item-new .sale-new{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.list-news .item-new .sale-new b{
+    color: #0008C8;
+    background-color: #E7EEFF;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin: 0;
+}
+
+.list-news .item-new .sale-new p{
+    margin: 0;
+}
+
+.list-news .item-new .detail-new{
+    padding: 5px 25px;
+    border: 2px solid #0008C8;
+    display: block;
+    border-radius: 100px;
+    max-width: 150px;
+    margin: 0px auto 10px auto;
+    text-align: center;
+}
+
+.list-news .item-new .detail-new a{
+    color: #0008C8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.list-news .item-new .desc-new .sale-new{
+    max-width: 100%;
+    min-width: 40%;
+}
+
+.list-news .item-new .desc-new .sale-new b{
+    background-color: transparent;
+    color: black;
+    padding: 0;
+}
+
+.list-news .item-new .desc-new .content{
+    display: flex;
+    align-items: flex-start;
+}
+
+.list-news .item-new .desc-new .thumnail,
+.list-news .item-new .desc-new .thum-mini{
+    display: none;
+}
+
+.list-news .item-new .desc-new .thumnail.active,
+.list-news .item-new .desc-new .thum-mini.active{
+    display: block;
+}
+
 
 @media (max-width: 767px) {
     .list-news .item-new .desc-new .content p{
         padding: 0 !important;
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 5;  /* số dòng hiển thị */
+        -webkit-line-clamp: 1;  /* số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
