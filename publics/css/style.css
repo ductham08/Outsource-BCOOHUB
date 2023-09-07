@@ -1314,8 +1314,277 @@ body.active {
     font-size: 35px;
 }
 
-
-
-
-
 /* FINAL PAGE END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* NEWS PAGE START */
+
+.news-page{
+    position: fixed;
+    max-height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.news-page .nav-left{
+    padding: 15px 20px;
+    border-right: 1px solid gray;
+    min-height: 100vh;
+}
+
+.news-page .logo h3 {
+    font-weight: 700;
+    color: white;
+    background-color: #344EFE;
+    display: inline;
+    padding: 0px 8px;
+    border-radius: 100%;
+    margin: 0 10px 0 0;
+    font-family: 'Open-san-bold';
+}
+
+.news-page h4 {
+    font-family: 'Open-san-bold';
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    color: #344EFE;
+}
+
+.news-page .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-page .list-content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.news-page .list-content ul li {
+    padding: 0;
+}
+
+/* CONTENT NEWS PAGE */
+
+.news-page .content-page{
+    display: flex;
+    align-items: flex-start;
+}
+
+.news-page .content-page .nav-left{
+    max-width: 12%;
+    min-width: 230px;
+}
+
+.news-page .content-news{
+    width: 85%;
+    padding: 15px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.news-page .content-news::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.news-page .nav-search{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #737374;
+    padding: 5px 10px !important;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+.news-page .nav-search p{
+    margin: 0 5px;
+}
+
+.news-page .nav-search .col-md-9{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.news-page .nav-search .col-md-3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.news-page .nav-search .col-md-9 p{
+  	display: -webkit-box;
+  	-webkit-line-clamp: 1;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+    margin: 0 5px;
+}
+
+.news-page .nav-search button{
+  	background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 2px;
+}
+
+.news-page .nav-search i{
+  	font-size: 20px;
+}
+
+.news-page .search{
+    margin: auto;
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .news-page {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .news-page .nav-left{
+        display: none;
+    }
+
+    .news-page .content-news{
+        width: 100%;
+    }
+}
+
+.content-news .content-nav-search{
+    transform: translateY(-150%);
+    transition: 0.45s ease-in-out;
+    z-index: 0;
+    opacity: 0;
+    background-color: white;
+    padding: 15px 0px 15px 0px !important;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.content-news .content-nav-search.active{
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transition: 0.45s ease-in-out;
+}
+
+.content-news .content-nav-search ul {
+    padding: 0;
+    margin: 0;
+}
+
+.content-news .content-nav-search ul li{
+    list-style: none;
+    margin: 5px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.content-news .content-nav-search ul li a{
+    display: -webkit-box;
+  	-webkit-line-clamp: 1;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+    margin: 0 5px;
+    padding: 5px 10px !important;
+    color: black;
+    text-decoration: none;
+}
+
+.list-news .item-new .type{
+    color: #00BF63;
+    margin: 0;
+}
+
+.list-news .item-new .title-new h2 a{
+    color: black;
+    text-decoration: none;
+}
+
+.list-news .item-new .title-new h2{
+    color: black;
+    margin: 0;
+    font-family: 'Noto-san-bold';
+    font-weight: 700;
+    display: block;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 2;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.list-news .item-new{
+    margin: 15px auto;
+    border-bottom: 1px solid gainsboro;
+}
+
+.list-news .item-new .title-new p{
+    font-size: 17px;
+    color: gray;
+}
+
+.list-news .item-new .desc-new{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.list-news .item-new .desc-new .content p{
+    padding-right: 15px !important;
+    display: block;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 13;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+    .list-news .item-new .desc-new .content p{
+        padding: 0 !important;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;  /* số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    
+    .list-news .item-new .desc-new .content{
+        order: 2;
+        margin: 10px 0;
+    }
+    
+    .list-news .item-new .desc-new .thumnail{
+        order: 1;
+    }
+
+    .news-page .content-news{
+        padding: 0;
+    }
+
+}
