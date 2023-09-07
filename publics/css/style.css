@@ -1210,4 +1210,112 @@ body.active {
 }
 
 
+/* COUNT START */
+.count-step{
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.count-step .line{
+    background-color: #C4C4C4;
+    height: 1px;
+    width: 10%;
+    margin: 0px 5px;
+}
+
+.count-step .line.active{
+    background-color: #3D5CFF;
+}
+
+.count-step p.active{
+    background-color: #3D5CFF;
+    color: white;
+}
+
+.count-step p{
+    background-color: #C4C4C4;
+    margin: 0;
+    color: white;
+    padding: 1px 7.5px;
+    display: inline-block;
+    border-radius: 50px;
+    width: min-content;
+    font-size: 15px;
+}
+
 /* SIGNIN PAGE END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* FINAL PAGE START */
+
+.final{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final h4{
+    font-family: 'Open-san-bold';
+}
+
+.final i{
+    color: white;
+    background-color: #17BF6E;
+    display: block;
+    font-size: 35px;
+    padding: 7px 9px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
+.payment{
+    margin: 15px 0;
+}
+
+.payment p{
+    margin: 0 auto;
+}
+
+.payment b{
+    margin: auto;
+    text-align: center  ;
+    display: inherit;
+    font-family: 'Open-san-bold';
+}
+
+.exit {
+    margin: 30px auto;
+}
+
+.exit a{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.exit h5{
+    font-family: 'Open-san-bold';
+}
+
+.exit i{
+    font-size: 35px;
+}
+
+
+
+
+
+/* FINAL PAGE END */
