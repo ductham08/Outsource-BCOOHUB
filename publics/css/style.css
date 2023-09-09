@@ -1417,19 +1417,19 @@ body.active {
     margin: 0 5px;
 }
 
-.news-page .nav-search .col-md-9{
+.news-page .nav-search .right{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.news-page .nav-search .col-md-3{
+.news-page .nav-search .left{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.news-page .nav-search .col-md-9 p{
+.news-page .nav-search .right p{
   	display: -webkit-box;
   	-webkit-line-clamp: 1;  /* số dòng hiển thị */
   	-webkit-box-orient: vertical;
@@ -1443,6 +1443,11 @@ body.active {
     outline: none;
     border: none;
     margin-top: 2px;
+}
+
+.news-page .nav-search a{
+    color: black;
+    text-decoration: none;
 }
 
 .news-page .nav-search i{
@@ -1652,3 +1657,139 @@ body.active {
     }
 
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* DETAIL NEW START */
+
+.detail-new-page{
+    padding-top: 2vw;
+}
+
+.post-new{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.post-new p{
+    margin: 0;
+}
+
+.post-new h5{
+    margin: 0;
+    font-family: 'Noto-san-bold';
+}
+
+.post-new .avatar{
+    width: 60px ;
+    border-radius: 150px;
+    margin-right: 10px;
+}
+
+.post-new .avatar img{
+    border-radius: 150px;
+}
+
+.detail-new-page .sale-new{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 5px 0;
+}
+
+.detail-new-page .sale-new b{
+    color: #0008C8;
+    background-color: #E7EEFF;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin: 0;
+}
+
+.detail-new-page .sale-new p{
+    margin: 0;
+}
+
+.detail-new-page .title-new h3{
+    font-family: 'Noto-san-bold';
+    margin: 0;
+}
+
+.detail-new-page .sort-desc{
+    color: gray;
+    margin: 15px 0;
+}
+
+/* DETAIL NEW END */
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* TRENDING START */
+
+.list-news{
+    padding: 3vw 0;
+}
+
+.trending-new {
+    padding: 2vw 0;
+}
+
+.trending-new .title{
+    background-color: #FFF500;
+    font-family: 'Noto-san-bold';
+    text-align: center;
+    padding: 7px 0px;
+    border-radius: 50px;
+    color: #0B0B89;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.trending-new .list-trending .item-trending{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.trending-new .list-trending .item-trending h4 a{
+    margin: 0;
+    color: black;
+    text-decoration: none;
+}
+
+.trending-new .list-trending .item-trending .desc{
+    display: -webkit-box;
+  	-webkit-line-clamp: 2;  
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.trending-new .more{
+    color: #0008C8;
+    text-decoration: none;
+    font-family: 'Noto-san-bold';
+    border: 2px solid #0008C8;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 20px;
+}
+
+@media (max-width: 768px) {
+    .trending-new .title{
+        width: 100%;
+    }
+}
+
+/* TRENDING END */
