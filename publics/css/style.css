@@ -1762,6 +1762,7 @@ body.active {
 }
 
 .trending-new .list-trending .item-trending h4 a{
+    font-family: 'Noto-san-bold';
     margin: 0;
     color: black;
     text-decoration: none;
@@ -1786,9 +1787,45 @@ body.active {
     padding: 5px 20px;
 }
 
+.trending-new .list-trending{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trending-new .list-trending .trending-small{
+    padding-left: 10px !important;
+    padding-top: 20px !important;
+}
+
+.trending-new .list-trending .trending-small .item-trending{
+    margin-bottom: 15px;
+}
+
+.trending-new .type{
+    color: #00BF63;
+    font-size: 15px;
+}
+
+.trending-new .list-trending .trending-small h5 a{
+    font-family: 'Noto-san-bold';
+    display: -webkit-box;
+    color: black;
+    text-decoration: none;
+  	-webkit-line-clamp: 1;  
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
 @media (max-width: 768px) {
     .trending-new .title{
         width: 100%;
+    }
+
+    .trending-new .list-trending .trending-small{
+        padding: 0 !important;
     }
 }
 
@@ -1853,6 +1890,36 @@ body.active {
     display: none;
 }
 
+.docs-trending .title{
+    font-family: 'Noto-san-bold';
+    color: black;
+}
+
+.docs-trending .sale-new{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 5px 0;
+}
+
+.docs-trending .type{
+    color: #00BF63;
+    font-size: 15px;
+}
+
+.docs-trending .sale-new b{
+    color: #0008C8;
+    background-color: #E7EEFF;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin: 0;
+}
+
+.docs-trending .sale-new p{
+    margin: 0;
+}
+
 .content-trending .cancle{
     text-decoration: none;
     color: #0008C8;
@@ -1865,3 +1932,30 @@ body.active {
 }
 
 /* DOCS TRENDING END */
+
+.navigate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.navigate a{
+    text-decoration: none;
+    display: block;
+    border: 1px solid #0008C8;
+    color: #0008C8;
+    margin: 0px 5px;
+    width: 28px;
+    border-radius: 2px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigate a.active{
+    border: 1px solid #0008C8;
+    color: white;
+    background-color: #0008C8;
+}
