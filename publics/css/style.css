@@ -1389,9 +1389,16 @@ body.active {
 
 .news-page .content-news{
     width: 85%;
-    padding: 15px;
+    padding: 0 15px 15px 15px;
     height: 95vh;
     overflow: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.news-page .content-news .sitebar{
+    padding-left: 15px !important;
+    padding-top: 5vw !important;
 }
 
 .news-page .content-news::-webkit-scrollbar {
@@ -1454,11 +1461,16 @@ body.active {
   	font-size: 20px;
 }
 
-.news-page .search{
+.news-page .search-sticky{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
     margin: auto;
-    position: relative;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -1558,7 +1570,6 @@ body.active {
 }
 
 .list-news .item-new .desc-new .content p{
-    padding-right: 15px !important;
     display: block;
   	display: -webkit-box;
   	-webkit-line-clamp: 2;  /* số dòng hiển thị */
@@ -1623,6 +1634,7 @@ body.active {
 .list-news .item-new .desc-new .thumnail,
 .list-news .item-new .desc-new .thum-mini{
     display: none;
+    padding-left: 15px !important;
 }
 
 .list-news .item-new .desc-new .thumnail.active,
@@ -1733,10 +1745,6 @@ body.active {
 /*  */
 
 /* TRENDING START */
-
-.list-news{
-    padding: 3vw 0;
-}
 
 .trending-new {
     padding: 2vw 0;
@@ -1936,22 +1944,32 @@ body.active {
 .navigate {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 15px 0;
+    max-width: 250px;
+    margin: auto;
 }
 
 .navigate a{
     text-decoration: none;
     display: block;
     border: 1px solid #0008C8;
-    color: #0008C8;
+    color: white;
+    width: 85px;
     margin: 0px 5px;
-    width: 28px;
+    font-family: 'Noto-san-bold';
     border-radius: 2px;
+    padding: 2px 0;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: #0008C8;
+}
+
+.navigate a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 .navigate a.active{
