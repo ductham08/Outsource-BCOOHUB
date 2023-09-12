@@ -2141,3 +2141,100 @@ body.active {
 }
 
 /* TAB 3 END */
+
+
+/*  */
+/*  */
+/*  */
+
+/* BÀI VIẾT LIÊN QUAN */
+
+.new_more {
+    margin-top: 5vw;
+}
+
+.new_more .news{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.new_more .news .item-new{
+    padding: 0px 10px !important;
+}
+
+.new_more .item-new .sale-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.new_more .item-new .sale-new b {
+    color: #0008C8;
+    background-color: #E7EEFF;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin: 0;
+}
+
+.new_more .item-new .title-new h4 a {
+    color: black;
+    text-decoration: none;
+}
+
+.new_more .item-new .title-new h4 {
+    color: black;
+    margin: 0;
+    font-family: 'Noto-san-bold';
+    font-weight: 700;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.new_more .item-new .title-new p {
+    font-size: 15px;
+    color: gray;
+    margin: 0;
+}
+
+.new_more .item-new .content .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0px;
+}
+
+.new_more .item-new .detail-new {
+    padding: 5px 25px;
+    border: 2px solid #0008C8;
+    display: block;
+    border-radius: 100px;
+    max-width: 150px;
+    margin: 0px auto 10px auto;
+    text-align: center;
+}
+
+.new_more .item-new .detail-new a {
+    color: #0008C8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.new_more .item-new .type {
+    color: #00BF63;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .new_more .news .item-new {
+        padding: 0px !important;
+    }
+}
