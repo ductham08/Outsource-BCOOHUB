@@ -1324,7 +1324,6 @@ body.active {
 
 .news-page .nav-left{
     padding: 15px 20px;
-    border-right: 1px solid gray;
     min-height: 100vh;
 }
 
@@ -1455,7 +1454,7 @@ body.active {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: white;
-    margin: auto;
+    max-width: 95%;
     position: sticky;
     top: 0;
     display: flex;
@@ -1464,6 +1463,10 @@ body.active {
 }
 
 @media (max-width: 768px) {
+    .news-page .search-sticky{
+        max-width: 100%;
+    }
+
     .news-page {
         padding-left: 20px !important;
         padding-right: 20px !important;
@@ -1637,8 +1640,16 @@ body.active {
     display: none;
 }
 
+.list-news{
+    max-width: 95%;
+}
+
 
 @media (max-width: 767px) {
+    .list-news{
+        max-width: 100%;
+    }
+
     .list-news .item-new .desc-new .content p{
         padding: 0 !important;
         display: block;
@@ -1780,6 +1791,10 @@ body.active {
     margin-bottom: 15px;
 }
 
+.trending-new .list-trending .trending-big{
+    padding-right: 3% !important;
+}
+
 .trending-new .list-trending .item-trending{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1852,6 +1867,10 @@ body.active {
 
     .trending-new .list-trending .trending-small{
         padding: 0 !important;
+    }
+
+    .trending-new .list-trending .trending-big{
+        padding-right: 0% !important;
     }
 }
 
