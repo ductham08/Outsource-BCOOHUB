@@ -1435,6 +1435,7 @@ body.active {
     width: 85%;
     padding: 0 15px 15px 15px;
     height: 95vh;
+    margin-top: 15px;
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
@@ -1506,7 +1507,6 @@ body.active {
 }
 
 .news-page .search-sticky{
-    padding-top: 15px;
     padding-bottom: 15px;
     background-color: white;
     max-width: 95%;
