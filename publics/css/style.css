@@ -1630,13 +1630,11 @@ body.active {
 
 .list-news .item-new .desc-new .thumnail,
 .list-news .item-new .desc-new .thum-mini{
-    display: none;
     padding-left: 15px !important;
 }
 
-.list-news .item-new .desc-new .thumnail.active,
-.list-news .item-new .desc-new .thum-mini.active{
-    display: block;
+.list-news .item-new .desc-new .thum-mini{
+    display: none;
 }
 
 
@@ -1655,12 +1653,20 @@ body.active {
         display: block !important;
     }
 
-    .list-news .item-new .desc-new .thumnail, .list-news .item-new .desc-new .thum-mini{
+    .list-news .item-new .desc-new .thum-mini{
         padding: 0 !important;
+        display: block;
+        order: 2;
+        padding-top: 15px !important;
+    }
+
+    .list-news .item-new .desc-new .thumnail{
+        display: none;
     }
 
     .list-news .item-new .desc-new .content .text{
         -webkit-line-clamp: 5;
+        padding-right: 10px;
     }
 
     .list-news .item-new .detail-new{
