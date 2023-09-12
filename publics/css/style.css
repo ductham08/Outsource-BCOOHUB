@@ -1327,6 +1327,26 @@ body.active {
     min-height: 100vh;
 }
 
+.news-page .nav-left .user{
+    margin: 25px 0;
+}
+
+.news-page .nav-left .user .user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-page .nav-left .user .user-name h5{
+    margin: 0 15px;
+}
+
+.news-page .nav-left .user .user-name h5 a{
+    color: #e8c117;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 .news-page .logo h3 {
     font-weight: 700;
     color: white;
