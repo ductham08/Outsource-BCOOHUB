@@ -1548,7 +1548,13 @@ body.active {
         max-width: 100%;
     }
 
-    .news-page {
+    .news-page .menu_set,
+    .news-page .search-sticky,
+    .news-page .checkpoint,
+    .news-page .checkpoint,
+    .news-page .item-new,
+    .news-page .trending-new,
+    .news-page .sitebar {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
@@ -1686,18 +1692,19 @@ body.active {
 }
 
 .list-news .item-new .detail-new{
-    padding: 5px 25px;
-    border: 2px solid #0008C8;
+    padding: 7px 25px;
+    border: none;
+    background-color: #0029FF;
     display: block;
-    border-radius: 100px;
-    max-width: 150px;
+    color: white;
     margin: 0px auto 10px auto;
     text-align: center;
+    width: 100%;
     display: none;
 }
 
 .list-news .item-new .detail-new a{
-    color: #0008C8;
+    color: white;
     font-weight: 700;
     text-decoration: none;
 }
