@@ -1382,6 +1382,7 @@ body.active {
     height: 95vh;
     overflow: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -1474,6 +1475,12 @@ body.active {
 
     .news-page .content-news{
         width: 100%;
+    }
+
+    .news-page .content-news .sitebar{
+        padding: 0 !important;
+        margin-top: 25px;
+
     }
 }
 
