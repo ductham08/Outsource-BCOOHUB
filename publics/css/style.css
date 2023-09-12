@@ -1313,6 +1313,38 @@ body.active {
 
 /* NEWS PAGE START */
 
+.news-page .checkpoint h5{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.news-page .list-checkpoint .item-checkpoint{
+    width: 100%;
+    margin: 7px 0;
+    display: inline;
+    padding: 0px 10px;
+    border-right: 1px solid gainsboro;
+}
+
+.news-page .list-checkpoint .item-checkpoint a{
+    display: inline-block;
+    padding: 3px 10px;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.news-page .list-checkpoint .more a{
+    color: black;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
 .news-page{
     position: fixed;
     max-height: 100vh;
@@ -1504,6 +1536,11 @@ body.active {
         padding: 0 !important;
         margin-top: 25px;
 
+    }
+
+    .news-page .list-checkpoint .item-checkpoint{
+        display: block;
+        border: none;
     }
 }
 
@@ -1871,11 +1908,8 @@ body.active {
 
 .trending-new .list-trending .trending-small h5 a{
     font-family: 'Noto-san-bold';
-    display: -webkit-box;
     color: black;
     text-decoration: none;
-  	-webkit-line-clamp: 1;  
-  	-webkit-box-orient: vertical;
   	overflow: hidden;
   	text-overflow: ellipsis;
 }
