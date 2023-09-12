@@ -1558,6 +1558,17 @@ body.active {
         background-color: hsla(230, 100%, 50%, 0.05);
     }
 
+    .news-page .item-new.item-firt .detail-new{
+        background-color:  #0029FF;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .news-page .item-new.item-firt .detail-new a{
+        color: white;
+    }
+
     .news-page .menu_set,
     .news-page .search-sticky,
     .news-page .checkpoint,
@@ -1705,17 +1716,19 @@ body.active {
 .list-news .item-new .detail-new{
     padding: 7px 25px;
     border: none;
-    background-color: #0029FF;
+    border: 2px solid #0029FF;
     display: block;
     color: white;
     margin: 0px auto 10px auto;
     text-align: center;
     width: 100%;
+    max-width: 180px;
+    border-radius: 100px;
     display: none;
 }
 
 .list-news .item-new .detail-new a{
-    color: white;
+    color: #0029FF;
     font-weight: 700;
     text-decoration: none;
 }
