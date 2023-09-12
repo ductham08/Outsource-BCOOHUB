@@ -1318,12 +1318,16 @@ body.active {
     margin-bottom: 15px;
 }
 
+.news-page .list-checkpoint{
+    padding: 3px 0;
+}
+
 .news-page .list-checkpoint .item-checkpoint{
+    border-right: 1px solid gainsboro;
     width: 100%;
     margin: 7px 0;
     display: inline;
     padding: 0px 10px;
-    border-right: 1px solid gainsboro;
 }
 
 .news-page .list-checkpoint .item-checkpoint a{
@@ -1336,7 +1340,7 @@ body.active {
     border-radius: 50px;
 }
 
-.news-page .list-checkpoint .more a{
+.news-page .more a{
     color: black;
     display: block;
     text-align: center;
@@ -1514,6 +1518,31 @@ body.active {
     align-items: center;
 }
 
+.news-page .search-sticky .nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+    margin: 20px auto;
+}
+
+.news-page .search-sticky .nav p{
+    margin: 0;
+}
+
+.news-page .search-sticky .nav button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.news-page .search-sticky .money ul li{
+    border: none;
+}
+
 @media (max-width: 768px) {
     .news-page .search-sticky{
         max-width: 100%;
@@ -1549,10 +1578,12 @@ body.active {
     transition: 0.45s ease-in-out;
     z-index: 0;
     opacity: 0;
+    margin-top: 7px;
     background-color: white;
-    padding: 15px 0px 15px 0px !important;
+    padding: 20px 15px !important;
     position: absolute;
-    border-radius: 5px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px gainsboro;
 }
 
 .content-news .content-nav-search.active{
@@ -1569,7 +1600,7 @@ body.active {
 
 .content-news .content-nav-search ul li{
     list-style: none;
-    margin: 5px 0;
+    margin: 10px 0;
     border-bottom: 1px solid gainsboro;
 }
 
@@ -1579,8 +1610,7 @@ body.active {
   	-webkit-box-orient: vertical;
   	overflow: hidden;
   	text-overflow: ellipsis;
-    margin: 0 5px;
-    padding: 5px 10px !important;
+    padding: 5px 0px !important;
     color: black;
     text-decoration: none;
 }
