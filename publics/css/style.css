@@ -15,6 +15,11 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
+    font-family: 'Be-vietnam';
+    src: url("../fonts/BeVietnamPro-Regular.ttf");
+}
+
+@font-face {
     font-family: 'Roboto';
     src: url("../fonts/Roboto-Regular.ttf");
 }
@@ -1526,7 +1531,7 @@ body.active {
 .list-news .item-new .title-new h2{
     color: black;
     margin: 0;
-    font-family: 'Noto-san-bold';
+    font-family: 'Be-vietnam';
     font-weight: 700;
     display: block;
   	display: -webkit-box;
@@ -1538,12 +1543,14 @@ body.active {
 
 .list-news .item-new{
     margin: 15px auto;
+    padding: 20px 0;
     border-bottom: 1px solid gainsboro;
 }
 
 .list-news .item-new .title-new p{
     font-size: 17px;
     color: gray;
+    margin: 15px 0;
 }
 
 .list-news .item-new .desc-new{
@@ -1553,14 +1560,12 @@ body.active {
     flex-wrap: wrap;
 }
 
-.list-news .item-new .desc-new .content p{
-    display: block;
+.list-news .item-new .desc-new .content .text{
   	display: -webkit-box;
-  	-webkit-line-clamp: 2;  /* số dòng hiển thị */
+  	-webkit-line-clamp: 7;  /* số dòng hiển thị */
   	-webkit-box-orient: vertical;
   	overflow: hidden;
   	text-overflow: ellipsis;
-    margin: 2px 0px;
 }
 
 .list-news .item-new .sale-new{
@@ -1591,6 +1596,7 @@ body.active {
     max-width: 150px;
     margin: 0px auto 10px auto;
     text-align: center;
+    display: none;
 }
 
 .list-news .item-new .detail-new a{
@@ -1638,6 +1644,21 @@ body.active {
         text-overflow: ellipsis;
     }
 
+    .list-news .item-new .title-new h2{
+        display: block !important;
+    }
+
+    .list-news .item-new .desc-new .thumnail, .list-news .item-new .desc-new .thum-mini{
+        padding: 0 !important;
+    }
+
+    .list-news .item-new .desc-new .content .text{
+        -webkit-line-clamp: 5;
+    }
+
+    .list-news .item-new .detail-new{
+        display: block;
+    }
     
     .list-news .item-new .desc-new .content{
         order: 2;
