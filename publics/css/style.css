@@ -1553,6 +1553,15 @@ body.active {
         max-width: 100%;
     }
 
+    
+    .news-page h4 {
+        padding-left: 20px !important;
+    }
+
+    #detail-page .detail-new-page{
+        padding: 0px 20px !important;
+    }
+
     .news-page .item-new.item-firt{
         background-color: hsla(230, 100%, 50%, 0.05);
     }
