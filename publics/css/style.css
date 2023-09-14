@@ -2442,7 +2442,7 @@ body.active {
     }
 
     .tab2 .content-tab2 p{
-        margin: 3vw 0;
+        margin: 5vw 0;
     }
 
     .tab2 .title-tab2 .desc-tab2 button a{
@@ -2455,6 +2455,13 @@ body.active {
         padding: 0 !important;
     }
     
+    .tab2 .title-tab2 h4{
+        margin: 10vw auto 4vw auto;
+    }
+
+    .tab2 .content-tab2 {
+        margin-top: 10vw;
+    }
 }
 
 .btn-form-edit {
