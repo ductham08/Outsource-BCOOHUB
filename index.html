@@ -149,46 +149,40 @@
 
                             <ul>
                                 <li>
-                                    <div class="left">
-                                        <b><a href="#">Advance</a></b>
+                                    <div class="menu-item" onclick="activeSubMenu(this)">
+                                        <div class="left">
+                                            <b><a href="#">Advance</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
                                     </div>
-                                    <div class="right">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
+
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Sub Menu 1</a></li>
+                                        <li><a href="#">Sub Menu 2</a></li>
+                                        <li><a href="#">Sub Menu 3</a></li>
+                                        <li><a href="#">Sub Menu 4</a></li>
+                                        <li><a href="#">Sub Menu 5</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <div class="left">
-                                        <b><a href="#">Solutions</a></b>
+                                    <div class="menu-item" onclick="activeSubMenu(this)">
+                                        <div class="left">
+                                            <b><a href="#">Setting</a></b>
+                                        </div>
+                                        <div class="right">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
                                     </div>
-                                    <div class="right">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left">
-                                        <b><a href="#">Products</a></b>
-                                    </div>
-                                    <div class="right">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left">
-                                        <b><a href="#">Resources</a></b>
-                                    </div>
-                                    <div class="right">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left">
-                                        <b><a href="#">Pricing</a></b>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left">
-                                        <b><a href="#">Log In</a></b>
-                                    </div>
+
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Sub Menu 1</a></li>
+                                        <li><a href="#">Sub Menu 2</a></li>
+                                        <li><a href="#">Sub Menu 3</a></li>
+                                        <li><a href="#">Sub Menu 4</a></li>
+                                        <li><a href="#">Sub Menu 5</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -614,6 +608,13 @@
                     inputField.attr("type", "text");
                     $('.show-pass').addClass("active");
                 }
+            }
+
+            // HANDLE TYPE PASSWORD
+            const activeSubMenu = (element) => {
+                
+               $(` ${element} .sub-menu ` ).toggleClass('active')
+
             }
 
 

@@ -377,11 +377,14 @@ body.active {
         margin: 0;
     }
 
-    .header .header_mobile .menu_move ul li {
+    .header .header_mobile .menu_move ul li .menu-item{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 15px;
+    }
+
+    .header .header_mobile .menu_move ul li{
+        list-style: none;
     }
 
     .header .header_mobile .menu_move ul li .left {
@@ -437,6 +440,33 @@ body.active {
 
     .login-disable button i {
         margin: 2px 5px 0 5px;
+    }
+
+    .header .header_mobile .menu_move .sub-menu{
+        padding: 0;
+        padding-left: 15px;
+        transform: scaleY(0);
+        transition: 0.4s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        transform-origin: top center; 
+    }
+    
+    .header .header_mobile .menu_move .sub-menu.active{
+        height: auto;
+        transform: scaleY(1);
+        transition: 0.4s ease-in-out;
+    }
+    
+    .header .header_mobile .menu_move .sub-menu li{
+        padding: 2px 0;
+        list-style: none;
+    }
+
+    .header .header_mobile .menu_move .sub-menu li a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Open-san-bold';
     }
 }
 
@@ -2445,11 +2475,7 @@ body.active {
         margin: 5vw 0;
     }
 
-    .tab2 .title-tab2 .desc-tab2 button a{
-        color: #A07C00;
-        text-decoration: none;
-        font-family: 'Open-san-bold';
-    }
+    
 
     .list-news .item-new .desc-new .thumnail{
         padding: 0 !important;
@@ -2511,5 +2537,11 @@ body.active {
 .btn-active-form a{
     text-decoration: none;
     color: #334DFF;
+    font-family: 'Open-san-bold';
+}
+
+.tab2 .title-tab2 .desc-tab2 button a{
+    color: #A07C00;
+    text-decoration: none;
     font-family: 'Open-san-bold';
 }
