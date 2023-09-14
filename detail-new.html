@@ -34,8 +34,8 @@
                             </div>
 
                             <div class="user-name col-md-5 col-6">
-                                <h6 class="user-name user-active">ThucPhuong</h6>
-                                <a onclick="openLogin()" class="login active" href="javascript:void(0)"></a>
+                                <h6 class="user-name user-active active"><i class="fa-solid fa-circle-check" style="color: #e8c117;"></i> ThucPhuong </h6>
+                                <a onclick="openLogin()" class="login " href="javascript:void(0)"></a>
                                 <div class="btn_menu_mobile" onclick="handleLogin()">
                                     <div class="item_menu top"></div>
                                     <div class="item_menu center"></div>
@@ -325,6 +325,10 @@
 
         <!-- SCRIPT SWIPPER -->
         <script>
+
+            const handleLogin = () => {
+                activeMenu('.login-active')
+            }
 
             // HEADER START
             const activeMenu = (element) => {

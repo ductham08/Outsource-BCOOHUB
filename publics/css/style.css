@@ -728,7 +728,7 @@ body.active {
 }
 
 .content-tab1 .title-news {
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
 }
 
 .content-tab1 .title-news h2 {
@@ -2462,6 +2462,10 @@ body.active {
     .tab2 .content-tab2 {
         margin-top: 10vw;
     }
+
+    .content-tab1 .title-news{
+        margin-bottom: 12vw;
+    }
 }
 
 .btn-form-edit {
@@ -2501,7 +2505,7 @@ body.active {
     color: white;
     text-decoration: none;
     font-family: 'Open-san-bold';
-    padding: 10px 25px;
+    padding: 10px 50px;
 }
 
 .btn-active-form a{
