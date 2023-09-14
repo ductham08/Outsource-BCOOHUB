@@ -2450,6 +2450,10 @@ body.active {
         text-decoration: none;
         font-family: 'Open-san-bold';
     }
+
+    .list-news .item-new .desc-new .thumnail{
+        padding: 0 !important;
+    }
     
 }
 
