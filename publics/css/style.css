@@ -50,6 +50,28 @@ body::-webkit-scrollbar {
     }
 }
 
+@keyframes subMenu {
+    0% {
+        height: 0;
+        transition: 0.4s ease-in-out;
+    }
+    100% {
+        height: auto;
+        transition: 0.4s ease-in-out;
+    }
+}
+
+@keyframes subMenuDef {
+    0% {
+        height: auto;
+        transition: 0.4s ease-in-out;
+    }
+    100% {
+        height: 0;
+        transition: 0.4s ease-in-out;
+    }
+}
+
 
 .col,
 .col-1,
@@ -442,31 +464,43 @@ body.active {
         margin: 2px 5px 0 5px;
     }
 
-    .header .header_mobile .menu_move .sub-menu{
+    .header .header_mobile .menu_move .item-action{
+        cursor: pointer;
+    }
+
+    .header .header_mobile .menu_move .item-action .sub-menu{
         padding: 0;
         padding-left: 15px;
         transform: scaleY(0);
-        transition: 0.4s ease-in-out;
-        height: 0;
-        overflow: hidden;
         transform-origin: top center; 
+        overflow-y: hidden;
+        height: 0;
+        transition: transform 0.2s ease-in-out;
     }
     
-    .header .header_mobile .menu_move .sub-menu.active{
-        height: auto;
+    .header .header_mobile .menu_move .item-action.active .sub-menu{
+        height: 100%;
         transform: scaleY(1);
-        transition: 0.4s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .header .header_mobile .menu_move .item-action .right{
+        transition: 0.2s ease-in-out;
+    }
+
+    .header .header_mobile .menu_move .item-action.active .right{
+        transform: rotate(90deg);
+        transition: 0.2s ease-in-out;
     }
     
     .header .header_mobile .menu_move .sub-menu li{
-        padding: 2px 0;
+        margin: 0;
         list-style: none;
     }
 
     .header .header_mobile .menu_move .sub-menu li a{
         text-decoration: none;
         color: black;
-        font-family: 'Open-san-bold';
     }
 }
 
@@ -2514,7 +2548,7 @@ body.active {
 .btn-form-edit button.firt a{
     margin: 0;
     text-align: center;
-    padding: 7px 15px;
+    padding: 9.5px 17px;
 }
 
 .btn-form-edit button.second{
@@ -2531,7 +2565,7 @@ body.active {
     color: white;
     text-decoration: none;
     font-family: 'Open-san-bold';
-    padding: 10px 50px;
+    padding: 15px 30px;
 }
 
 .btn-active-form a{
