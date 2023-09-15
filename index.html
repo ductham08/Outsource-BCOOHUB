@@ -551,14 +551,25 @@
                 $('.list-news .item-second').addClass('active')
             }, 1000)
             
-
-            addAnimationToDiv();
+            // OPEND FORM LOGIN
+            const openLogin = () => {
+                $('.login-form').toggleClass("active");
+                $('.user-name .login').toggleClass("active-content");
+                $('body').toggleClass('active');
+            }
 
             // CHECK LOGIN
             const setActiveLogin = () => {
                 localStorage.setItem('login', JSON.stringify(true));
             }
 
+            // HEADER START
+            const activeMenu = (element) => {
+                $('body').toggleClass('active');
+                $(".btn_menu_mobile").toggleClass("active");
+                $(element).toggleClass("active");
+            }
+               
             const activeLogin = localStorage.getItem("login") ? true : false;
 
             const handleLogin = () => {
@@ -573,13 +584,7 @@
                 $('.header .login').removeClass('active');
             }
 
-            // HEADER START
-            const activeMenu = (element) => {
-                $('body').toggleClass('active');
-                $(".btn_menu_mobile").toggleClass("active");
-                $(element).toggleClass("active");
-            }
-                
+             
             // OPEND FORM Color
             const openForm = (color) => {
                 $('.content-right .form-start').addClass("active");
@@ -615,12 +620,7 @@
                 });
             }
 
-            // OPEND FORM LOGIN
-            const openLogin = () => {
-                $('.login-form').toggleClass("active");
-                $('.user-name .login').toggleClass("active-content");
-                $('body').toggleClass('active');
-            }
+            
 
             // HANDLE TYPE PASSWORD
             const handleShowPass = () => {
@@ -645,11 +645,7 @@
             }
 
 
-            //    SLIDER TAB 3 START
-
-
-
-            //    SLIDER TAB 3 END
+            
 
 
 
