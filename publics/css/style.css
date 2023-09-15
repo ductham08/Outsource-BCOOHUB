@@ -31,10 +31,14 @@ body::-webkit-scrollbar {
 
 @keyframes textIn {
     0% {
-        transform: scale(0.2);
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center; 
     }
-    100% {
-        transform: scale(1);
+    3% {
+        opacity: 1;
+        transform-origin: top center; 
+        transform: scaleY(1);
     }
 }
 
@@ -830,7 +834,7 @@ body.active {
 }
 
 .content-tab1 .list-news .item-news:nth-child(1) {
-    animation: textIn 1s ease-in;
+    animation: textIn 10s infinite ease-in;
 }
 
 .content-tab1 .list-news .item-news:nth-child(2) {
