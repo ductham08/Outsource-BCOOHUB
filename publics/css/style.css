@@ -2592,7 +2592,7 @@ body.active {
     color: white;
     text-decoration: none;
     font-family: 'Open-san-bold';
-    padding: 15px 30px;
+    padding: 17px 50px;
 }
 
 .btn-active-form a{
@@ -2605,4 +2605,11 @@ body.active {
     color: #A07C00;
     text-decoration: none;
     font-family: 'Open-san-bold';
+}
+
+@media (max-width: 767px) {
+        
+    .btn-form-edit button.second a{
+        padding: 15px 25px;
+    }
 }
