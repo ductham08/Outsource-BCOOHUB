@@ -29,18 +29,19 @@ body::-webkit-scrollbar {
     src: url("../fonts/NotoSans-Bold.ttf");
 }
 
-@keyframes textIn {
+@keyframes textInFirst {
     0% {
         opacity: 0;
-        transform: scaleY(0);
-        transform-origin: top center; 
+        transform:  scaleX(0);
+        transform-origin: left; 
     }
     3% {
         opacity: 1;
-        transform-origin: top center; 
-        transform: scaleY(1);
+        transform-origin: left; 
+        transform: scaleX(1);
     }
 }
+
 
 @keyframes textOut {
     0% {
@@ -833,8 +834,12 @@ body.active {
     text-overflow: ellipsis;
 }
 
+.content-tab1 .list-news .item-news {
+    
+}
+
 .content-tab1 .list-news .item-news:nth-child(1) {
-    animation: textIn 10s infinite ease-in;
+    animation: textInFirst 10s infinite ease-in;
 }
 
 .content-tab1 .list-news .item-news:nth-child(2) {
