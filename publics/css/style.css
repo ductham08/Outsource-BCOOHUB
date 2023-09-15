@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
         transform:  scaleX(0);
         transform-origin: left; 
     }
-    3% {
+    4% {
         opacity: 1;
         transform-origin: left; 
         transform: scaleX(1);
@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
         transform:  scaleX(0);
         transform-origin: right; 
     }
-    3% {
+    4% {
         opacity: 1;
         transform-origin: right; 
         transform: scaleX(1);
