@@ -2614,7 +2614,6 @@ body.active {
     }
 
     .btn-form-edit{
-        align-items: center;
-        justify-content: center;
+        margin-top: 4vw;
     }
 }
