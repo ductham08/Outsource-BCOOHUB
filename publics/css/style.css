@@ -407,6 +407,7 @@ body.active {
 
     .header .header_mobile .menu_move ul li{
         list-style: none;
+        margin: 10px auto 30px auto;
     }
 
     .header .header_mobile .menu_move ul li .left {
@@ -793,12 +794,14 @@ body.active {
 
 .content-tab1 .title-news {
     margin-bottom: 4vw;
+    margin-right: 10px;
 }
 
 .content-tab1 .title-news h2 {
     display: inline;
     font-family: 'Noto-san-bold';
     color: white;
+    font-size: 28px;
 }
 
 .content-tab1 .content-left .content {
@@ -870,10 +873,10 @@ body.active {
 @media (max-width: 767px) {
     .draw-icon-poly{
         display: block;
-        width: 12vw;
+        width: 9vw;
         position: absolute;
-        left: 35vw;
-        top: 14vw;
+        left: 22vw;
+        top: 50px;
     }
 
     .hide{
@@ -949,7 +952,7 @@ body.active {
     align-content: center;
     justify-content: flex-start;
     position: relative;
-    padding-top: 35px !important;
+    padding-top: 10px !important;
 }
 
 .tab2 .icon-next svg{
@@ -977,7 +980,7 @@ body.active {
     border: none;
     outline: none;
     display: block;
-    margin: 3vw auto;
+    margin: 3vw auto 5vw auto;
     padding: 6px 25px;
     border-radius: 50px;
 }
@@ -2506,17 +2509,15 @@ body.active {
     }
 
     .tab2 .content-tab2 p{
-        margin: 5vw 0;
+        margin: 4vw 0;
     }
-
-    
 
     .list-news .item-new .desc-new .thumnail{
         padding: 0 !important;
     }
     
     .tab2 .title-tab2 h4{
-        margin: 10vw auto 4vw auto;
+        margin: 4vw auto 4vw auto;
     }
 
     .tab2 .content-tab2 {
@@ -2526,6 +2527,32 @@ body.active {
     .content-tab1 .title-news{
         margin-bottom: 12vw;
     }
+
+    .tab2 .content-tab2 h2 {
+        font-size: 33px;
+    }
+
+    .tab2 .title-tab2 .desc-tab2 button {
+        margin: 3vw auto 15vw auto;
+    }
+
+    .content-tab1 .title h1 {
+        font-size: 26px;
+    }
+
+    .content-tab1 .description{
+        font-size: 19px;
+    }
+
+    .content-tab1 .title-news h2{
+        font-size: 27px;
+    }
+
+    .content-tab1 .title-news{
+        margin-right: 17px;
+        margin-bottom: 10vw;
+    }
+
 }
 
 .btn-form-edit {
