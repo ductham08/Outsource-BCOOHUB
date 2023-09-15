@@ -858,7 +858,7 @@ body.active {
     z-index: 1;
     height: 100%;
     background-color: #344FFF;
-    transform: rotate(18deg) translateX(-43.5%) translateY(59%);
+    transform: rotate(15deg) translateX(-43.5%) translateY(59%);
 }
 
 .content-tab1 .content-right {
@@ -2611,5 +2611,10 @@ body.active {
         
     .btn-form-edit button.second a{
         padding: 15px 25px;
+    }
+
+    .btn-form-edit{
+        align-items: center;
+        justify-content: center;
     }
 }
