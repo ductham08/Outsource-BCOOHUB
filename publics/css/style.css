@@ -2637,4 +2637,8 @@ body.active {
     .btn-form-edit{
         margin-top: 4vw;
     }
+
+    .main .tab.tab1{
+        min-height: 138vh;
+    }
 }
