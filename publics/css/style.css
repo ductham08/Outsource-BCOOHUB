@@ -195,6 +195,21 @@ body.active {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+    .main .tab.tab-1 {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .main .tab.tab-1 {
+        min-height: 120vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .main .tab.tab-1 {
+        min-height: 138vh;
+    }
 }
 
 
@@ -2636,9 +2651,5 @@ body.active {
 
     .btn-form-edit{
         margin-top: 4vw;
-    }
-
-    .main .tab.tab1{
-        min-height: 138vh;
     }
 }
