@@ -195,21 +195,6 @@ body.active {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
-    .main .tab.tab-1 {
-        min-height: 100vh;
-    }
-}
-
-@media (max-width: 425px) {
-    .main .tab.tab-1 {
-        min-height: 120vh;
-    }
-}
-
-@media (max-width: 375px) {
-    .main .tab.tab-1 {
-        min-height: 138vh;
-    }
 }
 
 
@@ -973,7 +958,7 @@ body.active {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-bottom: -27px;
+        margin-bottom: -23px;
     }
 
 }
@@ -2573,20 +2558,32 @@ body.active {
     }
 
     .content-tab1 .title h1 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .content-tab1 .description{
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .content-tab1 .title-news h2{
-        font-size: 27px;
+        font-size: 25px;
+    }
+
+    .content-tab1 .content-left{
+        margin-top: 0;
+    }
+
+    .btn-form-edit{
+        margin-top: 0;
     }
 
     .content-tab1 .title-news{
         margin-right: 17px;
-        margin-bottom: 10vw;
+        margin-bottom: 2vw;
+    }
+
+    .content-tab1 .list-news .item-news a, .content-tab1 .list-news .item-news p{
+        font-size: 15px;
     }
 
 }
