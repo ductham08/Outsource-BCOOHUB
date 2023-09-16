@@ -2647,6 +2647,13 @@ body.active {
     }
 
         
+    @media (max-height: 1000px) {
+            
+        .tab.tab-1{
+            min-height: 110vh;
+        }
+    }
+        
     @media (max-height: 800px) {
             
         .tab.tab-1{
