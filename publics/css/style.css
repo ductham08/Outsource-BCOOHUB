@@ -2645,25 +2645,26 @@ body.active {
     .content-tab1 .list-news .item-news a, .content-tab1 .list-news .item-news p{
         font-size: 15px;
     }
-}
 
-@media (max-height: 800px) {
         
-    .tab.tab-1{
-        min-height: 138vh;
+    @media (max-height: 800px) {
+            
+        .tab.tab-1{
+            min-height: 138vh;
+        }
     }
-}
 
-@media (max-height: 650px) {
-        
-    .tab.tab-1{
-        min-height: 165vh;
+    @media (max-height: 650px) {
+            
+        .tab.tab-1{
+            min-height: 165vh;
+        }
     }
-}
 
-@media (max-height: 500px) {
-        
-    .tab.tab-1{
-        min-height: 200vh;
+    @media (max-height: 500px) {
+            
+        .tab.tab-1{
+            min-height: 200vh;
+        }
     }
 }
