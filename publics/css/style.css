@@ -926,7 +926,7 @@ body.active {
 
     .content-tab1 .draw {
         width: 200%;
-        transform: rotate(-16deg) translateX(-28.5%) translateY(59%);
+        transform: rotate(347deg) translateX(-28.5%) translateY(57%);;
     }
 
     .content-tab1 .btn-active-form {
@@ -947,7 +947,7 @@ body.active {
     }
 
     .content-tab1 .title{
-        margin: 4vw 0;
+        margin: 2vw 0;
     }
 
     .login-form form{
@@ -2558,20 +2558,24 @@ body.active {
     }
 
     .content-tab1 .title h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .content-tab1 .description{
-        font-size: 19px;
+        font-size: 17px;
+    }
+
+    .content-tab1 .content-left {
+        margin-top: 0;
     }
 
     .content-tab1 .title-news h2{
-        font-size: 27px;
+        font-size: 24px;
     }
 
     .content-tab1 .title-news{
         margin-right: 17px;
-        margin-bottom: 10vw;
+        margin-bottom: 2vw;
     }
 
 }
@@ -2635,6 +2639,10 @@ body.active {
     }
 
     .btn-form-edit{
-        margin-top: 4vw;
+        margin-top: 0vw;
+    }
+
+    .content-tab1 .list-news .item-news a, .content-tab1 .list-news .item-news p{
+        font-size: 15.5px;
     }
 }
