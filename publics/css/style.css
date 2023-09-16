@@ -958,7 +958,7 @@ body.active {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-bottom: -23px;
+        margin-bottom: -27px;
     }
 
 }
@@ -2558,32 +2558,20 @@ body.active {
     }
 
     .content-tab1 .title h1 {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .content-tab1 .description{
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .content-tab1 .title-news h2{
-        font-size: 25px;
-    }
-
-    .content-tab1 .content-left{
-        margin-top: 0;
-    }
-
-    .btn-form-edit{
-        margin-top: 0;
+        font-size: 27px;
     }
 
     .content-tab1 .title-news{
         margin-right: 17px;
-        margin-bottom: 2vw;
-    }
-
-    .content-tab1 .list-news .item-news a, .content-tab1 .list-news .item-news p{
-        font-size: 15px;
+        margin-bottom: 10vw;
     }
 
 }
