@@ -2647,14 +2647,14 @@ body.active {
     }
 }
 
-@media (max-height: 750px) {
+@media (max-height: 800px) {
         
     .tab.tab-1{
         min-height: 138vh;
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 650px) {
         
     .tab.tab-1{
         min-height: 165vh;
